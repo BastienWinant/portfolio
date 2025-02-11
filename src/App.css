@@ -8,9 +8,8 @@
 main {
   width: 100vw;
   height: 100vh;
-
-  background-image: url('./assets/img/cedric-letsch-0mY01y72UKo-unsplash.jpg');
-  background-position: center;
+  
+  background: url('./assets/img/cedric-letsch-0mY01y72UKo-unsplash.jpg') center no-repeat;
   background-size: cover;
 }
 
