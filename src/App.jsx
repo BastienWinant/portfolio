@@ -1,7 +1,13 @@
 import './App.css'
 
 function App() {
-  return <h1>this is my portfolio app</h1>
+  return (
+    <main>
+      <div className="container">
+        <section className="hero"></section>
+      </div>
+    </main>
+  )
 }
 
 export default App

@@ -3,3 +3,23 @@
   --white: #EDF2EF;
   --primary: #F97068;
 }
+
+
+main {
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url('./assets/img/cedric-letsch-0mY01y72UKo-unsplash.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  height: 100%;
+  overflow-y: scroll;
+  background-color: #212738F2;
+}
+
+.hero {
+  height: 200vh;
+}
