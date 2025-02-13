@@ -1,0 +1,54 @@
+.header {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+
+  display: flex;
+  justify-content: flex-end;
+  padding: 2em;
+
+  /* border: 2px solid black; */
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+
+  background-color: var(--black);
+}
+
+.nav--btn-img {
+  height: 1.25em;
+  width: 1.25em;
+}
+
+.nav--collapse-btn {
+  position: absolute;
+  top: 2em;
+  right: 2em;
+}
+
+.nav--links {
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+
+  list-style-type: none;
+  text-align: center;
+}
+
+.nav--link {
+  color: var(--white);
+  text-decoration: none;
+  text-transform: capitalize;
+
+  /* border: 1px solid var(--primary); */
+}

@@ -1,11 +1,34 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-light';
+  src: url('./assets/fonts/Poppins-Light.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins-bold';
+  src: url('./assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-style: normal;
+}
+
 :root {
-  --black: #212738;
-  --white: #EDF2EF;
-  --primary: #F97068;
+  --black: #3A3335;
+  --white: #C6D8D3;
+  --primary: #D81E5B;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
 }
 
 
-main {
+.app-container {
   width: 100vw;
   height: 100vh;
   
@@ -13,12 +36,10 @@ main {
   background-size: cover;
 }
 
-.container {
-  height: 100%;
+main {
+  height: 100vh;
+  width: 100vw;
   overflow-y: scroll;
-  background-color: #212738F2;
-}
 
-.hero {
-  height: 200vh;
+  background-color: #3A3335E6;
 }
