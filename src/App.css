@@ -32,7 +32,7 @@ body {
   width: 100vw;
   height: 100vh;
   
-  background: url('./assets/img/cedric-letsch-0mY01y72UKo-unsplash.jpg') center no-repeat;
+  background: url('./assets/img/bg-image.jpg') center no-repeat;
   background-size: cover;
 }
 
@@ -40,6 +40,4 @@ main {
   height: 100vh;
   width: 100vw;
   overflow-y: scroll;
-
-  background-color: #3A3335E6;
 }
