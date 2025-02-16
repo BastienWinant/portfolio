@@ -13,17 +13,17 @@ export default function Header() {
   return (
     <header className='header'>
       <button type="button" onClick={toggleNav}>
-        <img src={menuBurgerIcon} className='nav--btn-img' alt="Menu burger icon." />
+        <img src={menuBurgerIcon} alt="" className="nav--btn-img" />
       </button>
-      {navExpanded && <nav className="nav" display={navExpanded}>
-        <button type="button" onClick={toggleNav} className='nav--collapse-btn'>
-          <img src={closeIcon} className="nav--btn-img" alt="Close icon." />
+      {navExpanded && <nav className="nav">
+        <button type="button" className='nav--collapse-btn' onClick={toggleNav}>
+          <img src={closeIcon} alt="" className="nav--btn-img" />
         </button>
-        <ul className="nav--links">
-          <li><a href="#" className="nav--link">work</a></li>
-          <li><a href="#" className="nav--link">about</a></li>
-          <li><a href="#" className="nav--link">blog</a></li>
-          <li><a href="#" className="nav--link">contact</a></li>
+        <ul className="nav-links">
+          <li><a href="#" className="nav-link">Work</a></li>
+          <li><a href="#" className="nav-link">About</a></li>
+          <li><a href="#" className="nav-link">Blog</a></li>
+          <li><a href="#" className="nav-link">Contact</a></li>
         </ul>
       </nav>}
     </header>
