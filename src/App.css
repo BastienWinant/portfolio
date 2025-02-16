@@ -40,11 +40,11 @@ body {
 section {
   display: flex;
   flex-direction: column;
-  padding: 0 2em;
+  padding: 3.5em 2em;
 }
 
 .section--header {
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .section--title {
@@ -103,7 +103,7 @@ h1 {
 
 @media only screen and (min-width: 768px) {
   section {
-    padding: 0 5em;
+    padding: 5em;
   }
 
   .hero {
