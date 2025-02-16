@@ -8,10 +8,10 @@ function App() {
       <Header />
       <main>
         <section className='hero'>
-          <div>
+          <div className='hero--inner'>
             <hgroup>
               <h1>Bastien Winant</h1>
-              <p>Front-end developer based in Luxembourg</p>
+              <p className='tagline'>Front-end developer based in Luxembourg</p>
             </hgroup>
             <CTAButton text="Get in touch" />
           </div>

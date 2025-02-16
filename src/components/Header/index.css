@@ -53,3 +53,35 @@
   outline: none;
   color: var(--primary);
 }
+
+@media only screen and (min-width: 768px) {
+  .header {
+    padding: 3.5em 5em;
+  }
+
+  .nav--expand-btn {
+    display: none;
+  }
+
+  .nav {
+    position: static;
+    height: unset;
+    width: unset;
+    padding: 0;
+    align-items: center;
+    background-color: transparent;
+    /* border: 2px solid black; */
+  }
+
+  .nav--collapse-btn {
+    display: none;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    align-items: center;
+    /* gap: 5vw; */
+    gap: 3.5em;
+    /* border: 2px solid orange; */
+  }
+}

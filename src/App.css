@@ -37,18 +37,62 @@ body {
   background-size: cover;  
 }
 
+section {
+  padding: 2em;
+}
+
 .hero {
   height: 100vh;
+  max-height: 768px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  text-align: center;
-
   border: 2px solid yellow;
+}
+
+.hero--inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.hero--inner hgroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5em;
+  text-align: center;
 }
 
 h1 {
   font-family: 'Poppins-bold';
-  font-size: 2.25rem;
+  font-size: 10vw;
+}
+
+.tagline {
+  max-width: 65%;
+}
+
+@media only screen and (min-width: 768px) {
+  section {
+    padding: 0 5em;
+  }
+
+  .hero {
+    justify-content: flex-start;
+  }
+
+  .hero--inner {
+    align-items: flex-start;
+  }
+
+  .hero--inner hgroup {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
 }
