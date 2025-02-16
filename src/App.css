@@ -38,7 +38,27 @@ body {
 }
 
 section {
-  padding: 2em;
+  padding: 0 2em;
+}
+
+.section--header {
+  border: 1px solid black;
+}
+
+.section--title {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+.section--title-text::after {
+  position: absolute;
+  top: 2em;
+  left: 0;
+  content: '';
+  width: 60%;
+  border-bottom: .1em solid var(--primary);
 }
 
 .hero {
@@ -47,7 +67,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid yellow;
 }
 
 .hero--inner {
@@ -72,6 +91,12 @@ h1 {
 
 .tagline {
   max-width: 65%;
+}
+
+/* WORK SECTION */
+.work {
+  min-height: 100vh;
+  background-color: var(--black);
 }
 
 @media only screen and (min-width: 768px) {

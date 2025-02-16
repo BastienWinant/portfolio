@@ -16,6 +16,13 @@ function App() {
             <CTAButton text="Get in touch" />
           </div>
         </section>
+        <section className='work'>
+          <header className="section--header">
+            <h2 className="section--title">
+              <span className='section--title-text'>my work</span>
+            </h2>
+          </header>
+        </section>
       </main>
     </div>
   )
