@@ -38,6 +38,8 @@ body {
 }
 
 section {
+  display: flex;
+  flex-direction: column;
   padding: 0 2em;
 }
 
@@ -64,7 +66,7 @@ section {
 .hero {
   height: 100vh;
   max-height: 768px;
-  display: flex;
+  min-height: 500px;
   align-items: center;
   justify-content: center;
 }
@@ -105,7 +107,7 @@ h1 {
   }
 
   .hero {
-    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .hero--inner {
