@@ -22,20 +22,24 @@ export default function Header() {
 
   return (
     <header className='header'>
-      <button type="button" className="nav--expand-btn" onClick={toggleNav}>
-        <img src={menuBurgerIcon} alt="Hamburger menu icon." className="nav--btn-img" />
-      </button>
-      {(navExpanded || wideWindow) && <nav className="nav">
-        <button type="button" className='nav--collapse-btn' onClick={toggleNav}>
-          <img src={closeIcon} alt="Close icon." className="nav--btn-img" />
+      {
+        (navExpanded || wideWindow) ?
+        <nav className="nav">
+          <button type="button" className='nav--collapse-btn' onClick={toggleNav}>
+            <img src={closeIcon} alt="Close icon." className="nav--btn-img" />
+          </button>
+          <ul className="nav-links">
+            <li><a href="#" className="nav-link">Work</a></li>
+            <li><a href="#" className="nav-link">About</a></li>
+            <li><a href="#" className="nav-link">Blog</a></li>
+            <li><a href="#" className="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        :
+        <button type="button" className="nav--expand-btn" onClick={toggleNav}>
+          <img src={menuBurgerIcon} alt="Hamburger menu icon." className="nav--btn-img" />
         </button>
-        <ul className="nav-links">
-          <li><a href="#" className="nav-link">Work</a></li>
-          <li><a href="#" className="nav-link">About</a></li>
-          <li><a href="#" className="nav-link">Blog</a></li>
-          <li><a href="#" className="nav-link">Contact</a></li>
-        </ul>
-      </nav>}
+      }
     </header>
   )
 }
