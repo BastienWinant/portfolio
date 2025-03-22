@@ -1,0 +1,35 @@
+.section {
+  padding: 3em 0;
+  background-color: var(--black);
+}
+
+.section--container {
+  width: 85%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.section--header {
+  height: 4em;
+}
+
+.section--title {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.section--title::after {
+  content: "";
+  width: 2em;
+  position: absolute;
+  top: 1.75em;
+  left: 0;
+  text-transform: capitalize;
+  border: .1em solid var(--primary);
+  border-radius: .05em;
+}

@@ -1,28 +1,31 @@
 import './App.css'
 import Header from './components/Header/Header'
-import CTAButton from './components/CTAButton/CTAButton'
+import Section from './components/Section/index'
 
 function App() {
   return (
-    <div className='app-container'>
+    <div className="app--container">
       <Header />
       <main>
-        <section className='hero'>
-          <div className='hero--inner'>
-            <hgroup>
-              <h1>Bastien Winant</h1>
-              <p className='tagline'>Front-end developer based in Luxembourg</p>
-            </hgroup>
-            <CTAButton text="Get in touch" />
+        <section className="hero">
+          <div className="hero--container">
+            <h1>Bastien Winant</h1>
+            <p>Full-stack developer based in Luxembourg</p>
+            <button type="button" className="hero--cta-btn">Get in touch</button>
           </div>
         </section>
-        <section className='work'>
-          <header className="section--header">
-            <h2 className="section--title">
-              <span className='section--title-text'>my work</span>
-            </h2>
-          </header>
-        </section>
+        <Section>
+          <Section.Header>my work</Section.Header>
+          <Section.Body>This is a section about projects.</Section.Body>
+        </Section>
+        <Section>
+          <Section.Header>about me</Section.Header>
+          <Section.Body>This is the about section.</Section.Body>
+        </Section>
+        <Section>
+          <Section.Header>get in touch</Section.Header>
+          <Section.Body>This is the about section.</Section.Body>
+        </Section>
       </main>
     </div>
   )

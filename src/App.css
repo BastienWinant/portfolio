@@ -1,125 +1,75 @@
 @font-face {
-  font-family: 'Poppins';
-  src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Poppins-light';
-  src: url('./assets/fonts/Poppins-Light.ttf') format('truetype');
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Poppins-bold';
-  src: url('./assets/fonts/Poppins-SemiBold.ttf') format('truetype');
-  font-style: normal;
+  font-family: 'Lexend';
+  src: url(./assets/fonts/Lexend/Lexend-VariableFont_wght.ttf);
 }
 
 :root {
-  --black: #3A3335;
-  --white: #C6D8D3;
-  --primary: #D81E5B;
+  --black: #131B23;
+  --white: #E9F1F7;
+  --primary: #2274A5;
+  --accent: #E7DFC6;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: Lexend, Inter, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.app--container {
+  height: 100vh;
+  overflow-y: scroll;
+  background-image: url(./assets/images/the-chaffins-syhIpeHdLdM-unsplash.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+main {
+  background-color: #131B23EE;
   color: var(--white);
 }
 
-.app-container {
-  height: 100vh;
-  position: relative;
-  overflow-y: scroll;
-
-  background-image: url('./assets/img/bg-image.jpg');
-  background-position: center;
-  background-size: cover;  
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  padding: 3.5em 2em;
-}
-
-.section--header {
-  /* border: 1px solid black; */
-}
-
-.section--title {
-  position: relative;
-  display: inline-block;
-  font-size: 2rem;
-  text-transform: capitalize;
-}
-
-.section--title-text::after {
-  position: absolute;
-  top: 2em;
-  left: 0;
-  content: '';
-  width: 60%;
-  border-bottom: .1em solid var(--primary);
-}
-
+/* HERO */
 .hero {
   height: 100vh;
-  max-height: 768px;
-  min-height: 500px;
+}
+
+.hero--container {
+  height: 100%;
+  width: 85%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.hero--inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2em;
-}
-
-.hero--inner hgroup {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: .5em;
+  gap: 1em;
   text-align: center;
 }
 
 h1 {
-  font-family: 'Poppins-bold';
   font-size: 10vw;
+  font-weight: 800;
 }
 
-.tagline {
-  max-width: 65%;
+.hero p {
+  width: 75%;
 }
 
-/* WORK SECTION */
-.work {
-  min-height: 100vh;
-  background-color: var(--black);
+.hero--cta-btn {
+  margin-top: 1em;
+  padding: 1em 1.5em;
+  background-color: var(--primary);
 }
 
 @media only screen and (min-width: 768px) {
-  section {
-    padding: 5em;
-  }
-
-  .hero {
-    align-items: flex-start;
-  }
-
-  .hero--inner {
-    align-items: flex-start;
-  }
-
-  .hero--inner hgroup {
+  .hero--container {
     align-items: flex-start;
     text-align: left;
   }
 
   h1 {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
 }
