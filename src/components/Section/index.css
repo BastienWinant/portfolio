@@ -9,7 +9,7 @@
 
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 2.5em;
 }
 
 .section--header {
@@ -19,7 +19,7 @@
 .section--title {
   position: relative;
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: capitalize;
 }
 
@@ -27,9 +27,9 @@
   content: "";
   width: 2em;
   position: absolute;
-  top: 1.75em;
+  top: 2em;
   left: 0;
   text-transform: capitalize;
-  border: .1em solid var(--primary);
-  border-radius: .05em;
+  border: .05em solid var(--primary);
+  /* border-radius: .05em; */
 }
