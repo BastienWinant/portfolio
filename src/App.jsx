@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './components/Header/Header'
 import Section from './components/Section/index'
+import Project from './components/Project/Project'
 
 function App() {
   return (
@@ -16,7 +17,13 @@ function App() {
         </section>
         <Section>
           <Section.Header>my work</Section.Header>
-          <Section.Body>This is a section about projects.</Section.Body>
+          <Section.Body>
+            <div className="projects">
+              <Project />
+              <Project />
+              <Project />
+            </div>
+          </Section.Body>
         </Section>
         <Section>
           <Section.Header>about me</Section.Header>

@@ -1,0 +1,64 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card--body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.project-card--title {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.project-card--techstack {
+  display: none;
+  margin-left: 3em;
+}
+
+.project-card--links {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+}
+
+.project-card--demo-link {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  text-decoration: none;
+  position: relative;
+
+  padding: .5em;
+  border-bottom: .1em solid var(--primary);
+}
+
+.project-card--demo-link * {
+  z-index: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 0;
+  height: 100%;
+  transition: all .1s ease-in;
+
+  background-color: var(--primary);
+}
+
+.project-card--demo-link:hover .slider {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .project-card--techstack {
+    display: block;
+  }
+}
