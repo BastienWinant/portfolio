@@ -77,7 +77,7 @@
     grid-template-columns: 1fr 400px;
     grid-template-rows: 1fr;
     align-items: center;
-    gap: 2.5em;
+    gap: 5vw;
   }
 
   .project-card--img {
