@@ -24,6 +24,11 @@ export default function Header() {
     setExpanded(prevVal => !prevVal)
   }
 
+  function scrollToSection(scrollTarget) {
+    setExpanded(false)
+    scrollTarget.current.scrollIntoView({ behavior: "smooth" })
+  }
+
   return (
     <header className="header">
       <div className="header--container">
@@ -32,9 +37,9 @@ export default function Header() {
         </button>
         {(expanded || windowWidth >= 768) && <nav className="nav">
           <ul className="nav-links">
-            <li><a href="#" className="nav-link">work</a></li>
-            <li><a href="#" className="nav-link">about</a></li>
-            <li><a href="#" className="nav-link">contact</a></li>
+            <li><button type="button" className="nav-link" onClick={() => scrollToSection(workRef)}>work</button></li>
+            <li><button type="button" className="nav-link" onClick={() => scrollToSection(aboutRef)}>about</button></li>
+            <li><button type="button" className="nav-link" onClick={() => scrollToSection(contactRef)}>contact</button></li>
           </ul>
         </nav>}
       </div>
