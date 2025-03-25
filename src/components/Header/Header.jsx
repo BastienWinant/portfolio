@@ -2,10 +2,13 @@ import { useState, useEffect } from 'react'
 import './index.css'
 import hamburgerIcon from './img/12-menu-8.svg'
 import closeIcon from './img/12-e-remove.svg'
+import { useNav } from '../../providers/NavContext'
 
 export default function Header() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   const [expanded, setExpanded] = useState(false)
+
+  const {heroRef, workRef, aboutRef, contactRef} = useNav()
 
   useEffect(() => {
     const handleResize = () => {

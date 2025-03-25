@@ -1,6 +1,6 @@
-export default function Section({children}) {
+export default function Section({children, ref}) {
   return (
-    <section className="section">
+    <section className="section" ref={ref}>
       <div className="section--container">
         {children}
       </div>

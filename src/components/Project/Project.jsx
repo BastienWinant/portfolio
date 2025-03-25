@@ -1,10 +1,9 @@
 import './index.css'
 import ArrowIcon from './img/16-arrow-right.svg'
 import GithubIcon from './img/16-logo-github.svg'
+import { nanoid } from 'nanoid'
 
 export default function Project({imgUrl, name, description, techstack}) {
-  // const techstack = ['HTML', 'CSS', 'JavaScript', 'React']
-
   return (
     <article className="project-card">
       <img src={imgUrl} alt="Project screenshot." className="project-card--img" />
@@ -12,7 +11,7 @@ export default function Project({imgUrl, name, description, techstack}) {
         <h3 className="project-card--title">{name}</h3>
         <p className="project-card--description">{description}</p>
         <ul className="project-card--techstack">
-          {techstack.map(tech => <li>{tech}</li>)}
+          {techstack.map(tech => <li key={nanoid()}>{tech}</li>)}
         </ul>
         <div className="project-card--links">
           <a href="#" className="project-card--demo-link">
