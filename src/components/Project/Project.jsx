@@ -7,6 +7,7 @@ export default function Project() {
 
   return (
     <article className="project-card">
+      <img src="https://images.unsplash.com/photo-1742096202703-8bdd9b98fe30" alt="Project screenshot." className="project-card--img" />
       <div className="project-card--body">
         <h3 className="project-card--title">personal dashboard</h3>
         <p className="project-card--description">A Chrome extension to help you focus and stay up-to-date.</p>

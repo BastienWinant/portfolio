@@ -1,6 +1,10 @@
 .project-card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 240px auto;
+  gap: 1em;
+
+  /* border: 1px solid white; */
 }
 
 .project-card--body {
@@ -57,7 +61,30 @@
   width: 100%;
 }
 
+.project-card--github-link {
+  transition: all .15s ease-in-out;
+}
+
+.project-card--github-link:hover {
+  transform: scale(1.2);
+}
+
 @media only screen and (min-width: 768px) {
+  .project-card {
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .project-card--body {
+    border: 1px solid red;
+  }
+
+  /* .project-card--img {
+    align-self: center;
+  } */
+
   .project-card--techstack {
     display: block;
   }
