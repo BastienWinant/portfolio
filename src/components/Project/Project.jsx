@@ -2,15 +2,15 @@ import './index.css'
 import ArrowIcon from './img/16-arrow-right.svg'
 import GithubIcon from './img/16-logo-github.svg'
 
-export default function Project() {
-  const techstack = ['HTML', 'CSS', 'JavaScript', 'React']
+export default function Project({imgUrl, name, description, techstack}) {
+  // const techstack = ['HTML', 'CSS', 'JavaScript', 'React']
 
   return (
     <article className="project-card">
-      <img src="https://images.unsplash.com/photo-1742096202703-8bdd9b98fe30" alt="Project screenshot." className="project-card--img" />
+      <img src={imgUrl} alt="Project screenshot." className="project-card--img" />
       <div className="project-card--body">
-        <h3 className="project-card--title">personal dashboard</h3>
-        <p className="project-card--description">A Chrome extension to help you focus and stay up-to-date.</p>
+        <h3 className="project-card--title">{name}</h3>
+        <p className="project-card--description">{description}</p>
         <ul className="project-card--techstack">
           {techstack.map(tech => <li>{tech}</li>)}
         </ul>
