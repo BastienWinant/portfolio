@@ -30,6 +30,5 @@
   top: 2em;
   left: 0;
   text-transform: capitalize;
-  border: .05em solid var(--primary);
-  /* border-radius: .05em; */
+  border-bottom: .1em solid var(--primary);
 }

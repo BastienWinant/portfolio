@@ -11,40 +11,40 @@ function App() {
   const {heroRef, workRef, aboutRef, contactRef} = useNav()
 
   return (
-    <div className="app--container">
+    <div className='app--container'>
       <Header />
       <main>
-        <section className="hero" ref={heroRef}>
-          <div className="hero--container">
+        <section className='hero' ref={heroRef}>
+          <div className='hero--container'>
             <h1>Bastien Winant</h1>
             <p>Full-stack developer based in Luxembourg</p>
             <AnchorLink ref={contactRef}>
-              <div className="hero--cta-btn">Get in touch</div>
+              <div className='hero--cta-btn'>Get in touch</div>
             </AnchorLink>
           </div>
         </section>
         <Section ref={workRef}>
           <Section.Header>my work</Section.Header>
           <Section.Body>
-            <div className="projects">
+            <div className='projects'>
               <Project
-                imgUrl="https://images.unsplash.com/photo-1741145018917-216c9275bc3a"
-                name="personal dashboard"
-                description="A Chrome extension to help you focus and stay up-to-date."
+                imgUrl='https://images.unsplash.com/photo-1741145018917-216c9275bc3a'
+                name='personal dashboard'
+                description='A Chrome extension to help you focus and stay up-to-date.'
                 techstack={['HTML', 'CSS', 'JavaScript', 'React']}
               />
               <Project
-                imgUrl="https://images.unsplash.com/photo-1742783201678-33840ee6ee0b"
-                name="password generator"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius."
+                imgUrl='https://images.unsplash.com/photo-1742783201678-33840ee6ee0b'
+                name='password generator'
+                description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+                eius.'
                 techstack={['React', 'NextJS', 'Node', 'MongoDB']}
               />
               <Project
-                imgUrl="https://images.unsplash.com/photo-1742412615574-ce65e63598d8"
-                name="quizzical app"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius."
+                imgUrl='https://images.unsplash.com/photo-1742412615574-ce65e63598d8'
+                name='quizzical app'
+                description='Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+                eius.'
                 techstack={['React', 'Amazon EMR', 'Kepler.gl']}
               />
             </div>
@@ -53,8 +53,8 @@ function App() {
         <Section ref={aboutRef}>
           <Section.Header>about me</Section.Header>
           <Section.Body>
-            <figure className="profile">
-              <img src={profileImg} alt="Black and white headshot" className='profile-img' />
+            <figure className='profile'>
+              <img src={profileImg} alt='Black and white headshot' className='profile--img' />
               <figcaption className='profile--caption'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem consequuntur asperiores sapiente iusto dolorum vero nulla atque quibusdam. Voluptatum eaque a praesentium architecto tenetur, quasi ullam similique incidunt? Molestiae, quis?
                 <Button>My Resume</Button>
