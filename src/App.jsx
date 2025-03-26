@@ -5,7 +5,9 @@ import Project from './components/Project/Project'
 import AnchorLink from './components/AnchorLink/AnchorLink'
 import Button from './components/Button/Button'
 import { useNav } from './providers/NavContext'
-import profileImg from './assets/images/profile.png'
+import ProfileImg from './assets/images/profile.png'
+import LinkedinIcon from './assets/images/16-logo-linkedin.svg'
+import GithubIcon from './assets/images/16-logo-github.svg'
 
 function App() {
   const {heroRef, workRef, aboutRef, contactRef} = useNav()
@@ -54,7 +56,7 @@ function App() {
           <Section.Header>about me</Section.Header>
           <Section.Body>
             <figure className='profile'>
-              <img src={profileImg} alt='Black and white headshot' className='profile--img' />
+              <img src={ProfileImg} alt='Black and white headshot' className='profile--img' />
               <figcaption className='profile--caption'>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae eaque iure quibusdam! Vero suscipit, similique accusamus deleniti aut provident labore ea nisi facilis, ipsum qui. Dolores sunt voluptatum molestias nesciunt.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, voluptates! Soluta sed ipsam fugiat neque, repellat eveniet aspernatur alias reiciendis rem? Dolore perferendis cumque sed doloremque distinctio veritatis deserunt numquam?</p>
@@ -73,6 +75,14 @@ function App() {
           </Section.Body>
         </Section>
       </main>
+      <footer className="footer">
+        <a href="https://github.com/BastienWinant" target="_blank" className="footer--github-link">
+          <img src={GithubIcon} alt="" />
+        </a>
+        <a href="https://linkedin.com/in/winant" target="_blank" className="footer--linkedin-link">
+          <img src={LinkedinIcon} alt="Linkedin logo." />
+        </a>
+      </footer>
     </div>
   )
 }

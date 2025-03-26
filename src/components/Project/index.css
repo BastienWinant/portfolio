@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 240px auto;
-  gap: 1em;
+  gap: 1.5em;
 }
 
 .project-card--img {

@@ -20,14 +20,14 @@ body {
 .app--container {
   height: 100vh;
   overflow-y: scroll;
-  background-image: url(./assets/images/the-chaffins-syhIpeHdLdM-unsplash.jpg);
+  background-image: url(./assets/images/cedric-letsch-8YYeRlD86uk-unsplash.jpg);
   background-size: cover;
   background-position: center center;
   position: relative;
 }
 
 main {
-  background-color: #352D39F5;
+  background-color: #352D39EE;
   color: var(--white);
 }
 
@@ -133,4 +133,15 @@ h1 {
 
 .contact p {
   max-width: 700px;
+}
+
+/* FOOTER */
+.footer {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  background-color: var(--black);
+  color: var(--white);
 }

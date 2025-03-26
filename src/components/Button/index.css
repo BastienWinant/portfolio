@@ -1,6 +1,6 @@
 .btn {
   position: relative;
-
+  margin-top: 1em;
   display: flex;
   gap: 1em;
   padding: .75em 2em;
