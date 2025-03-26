@@ -1,0 +1,30 @@
+.btn {
+  position: relative;
+
+  display: flex;
+  gap: 1em;
+  padding: .75em 2em;
+  border: .1em solid var(--primary);
+  color: var(--white);
+}
+
+.btn--text {
+  margin: auto;
+  z-index: 0;
+}
+
+.btn--slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 0%;
+  height: 100%;
+  transition: all .15s ease-in-out;
+
+  background-color: var(--primary);
+}
+
+.btn:hover .btn--slider {
+  width: 100%;
+}
