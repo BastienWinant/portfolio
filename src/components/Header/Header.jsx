@@ -3,12 +3,13 @@ import './index.css'
 import hamburgerIcon from './img/12-menu-8.svg'
 import closeIcon from './img/12-e-remove.svg'
 import { useNav } from '../../providers/NavContext'
+import AnchorLink from '../AnchorLink/AnchorLink'
 
 export default function Header() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   const [expanded, setExpanded] = useState(false)
 
-  const {heroRef, workRef, aboutRef, contactRef} = useNav()
+  const { workRef, aboutRef, contactRef } = useNav()
 
   useEffect(() => {
     const handleResize = () => {
@@ -24,11 +25,6 @@ export default function Header() {
     setExpanded(prevVal => !prevVal)
   }
 
-  function scrollToSection(scrollTarget) {
-    setExpanded(false)
-    scrollTarget.current.scrollIntoView({ behavior: "smooth" })
-  }
-
   return (
     <header className="header">
       <div className="header--container">
@@ -37,9 +33,21 @@ export default function Header() {
         </button>
         {(expanded || windowWidth >= 768) && <nav className="nav">
           <ul className="nav-links">
-            <li><button type="button" className="nav-link" onClick={() => scrollToSection(workRef)}>work</button></li>
-            <li><button type="button" className="nav-link" onClick={() => scrollToSection(aboutRef)}>about</button></li>
-            <li><button type="button" className="nav-link" onClick={() => scrollToSection(contactRef)}>contact</button></li>
+            <li>
+              <AnchorLink ref={workRef} callback={() => setExpanded(false)}>
+                <div className="nav-link">work</div>
+              </AnchorLink>
+            </li>
+            <li>
+              <AnchorLink ref={aboutRef} callback={() => setExpanded(false)}>
+                <div className="nav-link">about</div>
+              </AnchorLink>
+            </li>
+            <li>
+              <AnchorLink ref={contactRef} callback={() => setExpanded(false)}>
+                <div className="nav-link">contact</div>
+              </AnchorLink>
+            </li>
           </ul>
         </nav>}
       </div>

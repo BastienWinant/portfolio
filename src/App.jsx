@@ -2,6 +2,7 @@ import './App.css'
 import Header from './components/Header/Header'
 import Section from './components/Section/index'
 import Project from './components/Project/Project'
+import AnchorLink from './components/AnchorLink/AnchorLink'
 import Button from './components/Button/Button'
 import { useNav } from './providers/NavContext'
 import profileImg from './assets/images/profile.png'
@@ -17,7 +18,9 @@ function App() {
           <div className="hero--container">
             <h1>Bastien Winant</h1>
             <p>Full-stack developer based in Luxembourg</p>
-            <button type="button" className="hero--cta-btn">Get in touch</button>
+            <AnchorLink ref={contactRef}>
+              <div className="hero--cta-btn">Get in touch</div>
+            </AnchorLink>
           </div>
         </section>
         <Section ref={workRef}>
@@ -54,14 +57,16 @@ function App() {
               <img src={profileImg} alt="Black and white headshot" className='profile-img' />
               <figcaption className='profile--caption'>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem consequuntur asperiores sapiente iusto dolorum vero nulla atque quibusdam. Voluptatum eaque a praesentium architecto tenetur, quasi ullam similique incidunt? Molestiae, quis?
-                <Button text="this is some text" />
+                <Button>My Resume</Button>
               </figcaption>
             </figure>
           </Section.Body>
         </Section>
         <Section ref={contactRef}>
           <Section.Header>get in touch</Section.Header>
-          <Section.Body>This is the about section.</Section.Body>
+          <Section.Body>
+            <Button>bastien.winant@gmail.com</Button>
+          </Section.Body>
         </Section>
       </main>
     </div>
