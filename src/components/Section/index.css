@@ -1,6 +1,7 @@
 .section {
-  padding: 3em 0;
+  padding: 6em 0;
   background-color: var(--black);
+  border: .05em solid var(--secondary);
 }
 
 .section--container {

@@ -56,7 +56,8 @@ function App() {
             <figure className='profile'>
               <img src={profileImg} alt='Black and white headshot' className='profile--img' />
               <figcaption className='profile--caption'>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem consequuntur asperiores sapiente iusto dolorum vero nulla atque quibusdam. Voluptatum eaque a praesentium architecto tenetur, quasi ullam similique incidunt? Molestiae, quis?
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae eaque iure quibusdam! Vero suscipit, similique accusamus deleniti aut provident labore ea nisi facilis, ipsum qui. Dolores sunt voluptatum molestias nesciunt.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, voluptates! Soluta sed ipsam fugiat neque, repellat eveniet aspernatur alias reiciendis rem? Dolore perferendis cumque sed doloremque distinctio veritatis deserunt numquam?</p>
                 <Button>My Resume</Button>
               </figcaption>
             </figure>
@@ -65,7 +66,10 @@ function App() {
         <Section ref={contactRef}>
           <Section.Header>get in touch</Section.Header>
           <Section.Body>
-            <Button>bastien.winant@gmail.com</Button>
+            <div className="contact">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi debitis earum, accusantium ex, maiores quidem autem asperiores at cum ipsa libero exercitationem! Repellat corrupti veritatis enim magni cupiditate velit.</p>
+              <Button>bastien.winant@gmail.com</Button>
+            </div>
           </Section.Body>
         </Section>
       </main>
