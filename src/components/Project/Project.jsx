@@ -1,4 +1,4 @@
-import { Button, Card, Image, Text, Box, Wrap, Badge } from "@chakra-ui/react"
+import { Button, Card, Image, Box, Wrap, Badge, LinkBox, LinkOverlay } from "@chakra-ui/react"
 import { nanoid } from "nanoid";
 
 export default function Project(props) {
@@ -23,8 +23,14 @@ export default function Project(props) {
           </Wrap>
         </Card.Body>
         <Card.Footer gap="2">
-          <Button variant="solid">Buy now</Button>
-          <Button variant="ghost">Add to cart</Button>
+          <LinkBox>
+            <Badge variant="solid" size="lg" px="4" py="2">Live site</Badge>
+            <LinkOverlay href="https://github.com/BastienWinant" target="_blank" />
+          </LinkBox>
+          <LinkBox>
+            <Badge variant="ghost" size="lg" px="4" py="2">Code</Badge>
+            <LinkOverlay href="https://github.com/BastienWinant" target="_blank" />
+          </LinkBox>
         </Card.Footer>
       </Box>
     </Card.Root>
