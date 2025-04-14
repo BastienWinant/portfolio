@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react";
-import { Box, Container, Button, IconButton, Show, Stack } from "@chakra-ui/react";
+import { Box, Container, IconButton, Show, useDisclosure } from "@chakra-ui/react";
 import { FaBars } from "react-icons/fa6";
 import NavLink from "./NavLink";
 
 export default function Header() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const { open, onToggle, onClose } = useDisclosure();
 
   useEffect(() => {
-    const watchWindowWidth = () => setWindowWidth(window.innerWidth);
+    const watchWindowWidth = () => {
+      setWindowWidth(window.innerWidth);
+      onClose();
+    }
     window.addEventListener("resize", watchWindowWidth);
     return () => window.removeEventListener("resize", watchWindowWidth);
   }, [])
@@ -28,8 +32,8 @@ export default function Header() {
         borderWidth="thin"
       >
         <Show
-          when={windowWidth >= 768}
-          fallback={<IconButton hideFrom="md"><FaBars /></IconButton>}
+          when={open || windowWidth >= 768}
+          fallback={<IconButton onClick={onToggle} hideFrom="md"><FaBars /></IconButton>}
         >
           <Box
             as="nav"
