@@ -1,11 +1,17 @@
 import './App.css'
 import Section from '@/components/Section'
+import Hero from '@/components/Hero/Hero'
 import { Box } from '@chakra-ui/react'
 
 function App() {
   return (
     <>
       <Box as="main">
+        <Section>
+          <Section.Body>
+            <Hero />
+          </Section.Body>
+        </Section>
         <Section>
           <Section.Header>my work</Section.Header>
           <Section.Body>this is the work section</Section.Body>

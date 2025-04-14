@@ -7,7 +7,9 @@ export default function Header({children}) {
         size={{base: "3xl", md: "4xl"}}
         fontWeight="medium"
         textTransform="capitalize"
-      >{children}</Heading>
+      >
+        {children}
+      </Heading>
       <Box w="20" borderWidth="thin" />
     </Stack>
   )
