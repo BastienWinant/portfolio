@@ -1,0 +1,59 @@
+import { useState, useEffect } from "react";
+import { Box, Container, Button, IconButton, Show, Stack } from "@chakra-ui/react";
+import { FaBars } from "react-icons/fa6";
+import NavLink from "./NavLink";
+
+export default function Header() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const watchWindowWidth = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", watchWindowWidth);
+    return () => window.removeEventListener("resize", watchWindowWidth);
+  }, [])
+
+  return (
+    <Box
+      as="header"
+      pos="fixed"
+      zIndex="1"
+      w="full"
+      border="2px solid green"
+    >
+      <Container
+        w={{md: "11/12"}}
+        display="flex"
+        alignItems="center"
+        justifyContent="flex-end"
+        borderWidth="thin"
+      >
+        <Show
+          when={windowWidth >= 768}
+          fallback={<IconButton hideFrom="md"><FaBars /></IconButton>}
+        >
+          <Box
+            as="nav"
+            pos={{base: "fixed", md: "static"}}
+            top="0"
+            left="0"
+            zIndex="1"
+            w={{base: "100vw", md: "auto"}}
+            h={{base: "100vh", md: "auto"}}
+            display="flex"
+            flexDir={{base: "column", md: "row"}}
+            alignItems="center"
+            justifyContent="center"
+            gapX="5vw"
+            gapY="4"
+            backgroundColor="black"
+            border="3px solid blue"
+          >
+            <NavLink>work</NavLink>
+            <NavLink>about</NavLink>
+            <NavLink>contact</NavLink>
+          </Box>
+        </Show>
+      </Container>
+    </Box>
+  )
+}

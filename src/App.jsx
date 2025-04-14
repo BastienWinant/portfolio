@@ -1,4 +1,5 @@
 import './App.css'
+import Header from '@/components/Header/Header'
 import Section from '@/components/Section'
 import Hero from '@/components/Hero/Hero'
 import { Box } from '@chakra-ui/react'
@@ -6,6 +7,7 @@ import { Box } from '@chakra-ui/react'
 function App() {
   return (
     <>
+      <Header />
       <Box as="main">
         <Section>
           <Section.Body>
