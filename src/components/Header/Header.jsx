@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Box, Container, IconButton, Show, useDisclosure } from "@chakra-ui/react";
-import { FaBars } from "react-icons/fa6";
+import { FaBars, FaXmark } from "react-icons/fa6";
 import NavLink from "./NavLink";
 
 export default function Header() {
@@ -31,9 +31,18 @@ export default function Header() {
         justifyContent="flex-end"
         borderWidth="thin"
       >
+        <IconButton
+          size="2xl"
+          variant="plain"
+          mr="-5"
+          zIndex="2"
+          onClick={onToggle}
+          hideFrom="md"
+        >
+          {open ? <FaXmark /> : <FaBars />}
+        </IconButton>
         <Show
           when={open || windowWidth >= 768}
-          fallback={<IconButton onClick={onToggle} hideFrom="md"><FaBars /></IconButton>}
         >
           <Box
             as="nav"
