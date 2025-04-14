@@ -22,7 +22,6 @@ export default function Header() {
       pos="fixed"
       zIndex="1"
       w="full"
-      border="2px solid green"
     >
       <Container
         w={{md: "11/12"}}
@@ -59,7 +58,6 @@ export default function Header() {
             gapX="5vw"
             gapY="4"
             backgroundColor="black"
-            border="3px solid blue"
           >
             <NavLink>work</NavLink>
             <NavLink>about</NavLink>

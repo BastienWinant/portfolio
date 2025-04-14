@@ -7,7 +7,6 @@ export default function Hero() {
       justify="center"
       gap="6"
       textAlign={{base: "center", md: "left"}}
-      border="1px solid orange"
     >
       <Heading size={{base: "4xl", md: "5xl", lg: "6xl"}} letterSpacing="tight">
         Jane Smith
