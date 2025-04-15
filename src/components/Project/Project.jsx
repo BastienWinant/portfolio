@@ -18,7 +18,7 @@ export default function Project(props) {
           <Card.Title textTransform="capitalize" fontSize={{base: "xl", md: "2xl"}}>{name}</Card.Title>
           <Card.Description fontSize={{base: "md", md: "lg"}}>{description}</Card.Description>
           <Wrap mt="4">
-            {techStack.map(tech => <Badge>{tech}</Badge>)}
+            {techStack.map(tech => <Badge key={nanoid()}>{tech}</Badge>)}
           </Wrap>
         </Card.Body>
         <Card.Footer gap="2">
