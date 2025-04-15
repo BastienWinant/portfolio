@@ -6,7 +6,11 @@ export default function Project(props) {
   const {name, description, imgUrl, techStack, reverse} = props;
 
   return (
-    <Card.Root flexDir={{base: "column", md: clsx(reverse ? "row-reverse" : "row")}} overflow="hidden">
+    <Card.Root
+      flexDir={{base: "column", md: clsx(reverse ? "row-reverse" : "row")}}
+      overflow="hidden"
+      variant="elevated"
+    >
       <Image
         objectFit="cover"
         src={imgUrl}

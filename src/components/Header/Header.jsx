@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Box, Container, IconButton, Show, useDisclosure } from "@chakra-ui/react";
+import { HStack, Box, Container, IconButton, Show, useDisclosure } from "@chakra-ui/react";
 import { FaBars, FaXmark } from "react-icons/fa6";
 import NavLink from "./NavLink";
 
@@ -17,13 +17,14 @@ export default function Header() {
   }, [])
 
   return (
-    <Box
+    <HStack
       as="header"
       pos="fixed"
       zIndex="1"
       w="full"
       shadow="sm"
       backgroundColor="bg.panel"
+      minH="16"
     >
       <Container
         w={{md: "11/12"}}
@@ -34,7 +35,7 @@ export default function Header() {
         <IconButton
           size="2xl"
           variant="plain"
-          mr="-5"
+          mr="-4"
           zIndex="2"
           onClick={onToggle}
           hideFrom="md"
@@ -56,9 +57,10 @@ export default function Header() {
             flexDir={{base: "column", md: "row"}}
             alignItems="center"
             justifyContent="center"
-            gapX="5vw"
+            gapX="12"
             gapY="4"
             backgroundColor="bg.panel"
+            mr="-5"
           >
             <NavLink>work</NavLink>
             <NavLink>about</NavLink>
@@ -66,6 +68,6 @@ export default function Header() {
           </Box>
         </Show>
       </Container>
-    </Box>
+    </HStack>
   )
 }
