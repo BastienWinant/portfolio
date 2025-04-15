@@ -22,13 +22,14 @@ export default function Header() {
       pos="fixed"
       zIndex="1"
       w="full"
+      shadow="sm"
+      backgroundColor="bg.panel"
     >
       <Container
         w={{md: "11/12"}}
         display="flex"
         alignItems="center"
         justifyContent="flex-end"
-        borderWidth="thin"
       >
         <IconButton
           size="2xl"
@@ -57,7 +58,7 @@ export default function Header() {
             justifyContent="center"
             gapX="5vw"
             gapY="4"
-            backgroundColor="black"
+            backgroundColor="bg.panel"
           >
             <NavLink>work</NavLink>
             <NavLink>about</NavLink>

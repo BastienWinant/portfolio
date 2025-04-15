@@ -30,6 +30,7 @@ function App() {
                 description="A Chrome Extension that gives you an overview over the current time, how the weather is like and how Dogecoin is performing. Interacts with multiple APIs using async JS."
                 techStack={['ReactJS', 'TailwindCSS', 'Firebase']}
                 imgUrl="https://images.unsplash.com/photo-1742292042826-cc35ffd81c74"
+                reverse={true}
               />
               <Project
                 name="password generator"
