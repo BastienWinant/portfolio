@@ -35,7 +35,7 @@ export default function Header() {
         <IconButton
           size="2xl"
           variant="plain"
-          mr="-4"
+          mr="-5"
           zIndex="2"
           onClick={onToggle}
           hideFrom="md"

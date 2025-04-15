@@ -10,11 +10,7 @@ function App() {
     <>
       <Header />
       <Box as="main" h="100vh" overflowY="scroll">
-        <Section>
-          <Section.Body>
-            <Hero />
-          </Section.Body>
-        </Section>
+        <Hero />
         <Section>
           <Section.Header>my work</Section.Header>
           <Section.Body>
