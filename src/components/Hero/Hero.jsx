@@ -11,7 +11,6 @@ export default function Hero() {
       alignItems={{base: "center", md: "flex-start"}}
       gapY="6"
       textAlign={{base: "center", md: "left"}}
-      borderWidth="thick"
     >
       <Heading
         size={{base: "4xl", md: "5xl", lg: "6xl"}}
