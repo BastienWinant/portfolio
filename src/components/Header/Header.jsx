@@ -1,11 +1,15 @@
 import { useState, useEffect } from "react";
 import { HStack, Box, Container, IconButton, Show, useDisclosure } from "@chakra-ui/react";
 import { FaBars, FaXmark } from "react-icons/fa6";
-import NavLink from "./NavLink";
+// import NavLink from "./NavLink";
+import AnchorButton from "@/components/AnchorButton/AnchorButton";
+import { useNav } from "@/providers/NavContext";
 
 export default function Header() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const { open, onToggle, onClose } = useDisclosure();
+
+  const {workRef, aboutRef, contactRef} = useNav();
 
   useEffect(() => {
     const watchWindowWidth = () => {
@@ -62,9 +66,33 @@ export default function Header() {
             backgroundColor="bg.panel"
             mr="-5"
           >
-            <NavLink>work</NavLink>
-            <NavLink>about</NavLink>
-            <NavLink>contact</NavLink>
+            <AnchorButton
+              size="xl"
+              variant="plain"
+              fontWeight="semibold"
+              ref={workRef}
+              func={onClose}
+            >
+              work
+            </AnchorButton>
+            <AnchorButton
+              size="xl"
+              variant="plain"
+              fontWeight="semibold"
+              ref={aboutRef}
+              func={onClose}
+            >
+              about
+            </AnchorButton>
+            <AnchorButton
+              size="xl"
+              variant="plain"
+              fontWeight="semibold"
+              ref={contactRef}
+              func={onClose}
+            >
+              contact
+            </AnchorButton>
           </Box>
         </Show>
       </Container>

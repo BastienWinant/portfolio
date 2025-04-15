@@ -1,17 +1,17 @@
 import { Button } from "@chakra-ui/react"
 
-export default function NavLink({children, ref, func}) {
+export default function AnchorButton(props) {
+  const {children, ref, func, ...attributes} = props;
+
   function scrollToRef() {
-    func && func()
+    func && func();
     ref.current?.scrollIntoView({behavior: 'smooth'})
   }
 
   return (
     <Button
-      size="xl"
-      variant="plain"
-      fontWeight="semibold"
       onClick={scrollToRef}
+      {...attributes}
     >
       {children}
     </Button>

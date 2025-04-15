@@ -1,4 +1,5 @@
 import './App.css'
+import { useNav } from '@/providers/NavContext'
 import Header from '@/components/Header/Header'
 import Section from '@/components/Section'
 import Hero from '@/components/Hero/Hero'
@@ -6,12 +7,14 @@ import Project from '@/components/Project/Project'
 import { Box, VStack } from '@chakra-ui/react'
 
 function App() {
+  const {homeRef, workRef, aboutRef, contactRef} = useNav();
+
   return (
     <>
       <Header />
       <Box as="main" h="100vh" overflowY="scroll">
-        <Hero />
-        <Section>
+        <Hero ref={homeRef} />
+        <Section ref={workRef}>
           <Section.Header>my work</Section.Header>
           <Section.Body>
             <VStack gap="12">
@@ -37,11 +40,11 @@ function App() {
             </VStack>
           </Section.Body>
         </Section>
-        <Section>
+        <Section ref={aboutRef}>
           <Section.Header>about me</Section.Header>
           <Section.Body>this is the about section</Section.Body>
         </Section>
-        <Section>
+        <Section ref={contactRef}>
           <Section.Header>get in touch</Section.Header>
           <Section.Body>this is the contact section</Section.Body>
         </Section>
