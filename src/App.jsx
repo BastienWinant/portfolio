@@ -7,13 +7,13 @@ import Project from '@/components/Project/Project'
 import { Box, VStack } from '@chakra-ui/react'
 
 function App() {
-  const {homeRef, workRef, aboutRef, contactRef} = useNav();
+  const { workRef, aboutRef, contactRef} = useNav();
 
   return (
     <>
       <Header />
       <Box as="main" h="100vh" overflowY="scroll">
-        <Hero ref={homeRef} />
+        <Hero />
         <Section ref={workRef}>
           <Section.Header>my work</Section.Header>
           <Section.Body>
