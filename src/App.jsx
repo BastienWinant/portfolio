@@ -4,6 +4,7 @@ import Header from '@/components/Header/Header'
 import Section from '@/components/Section'
 import Hero from '@/components/Hero/Hero'
 import Project from '@/components/Project/Project'
+import Footer from '@/components/Footer/Footer'
 import { Box, VStack } from '@chakra-ui/react'
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
           <Section.Header>get in touch</Section.Header>
           <Section.Body>this is the contact section</Section.Body>
         </Section>
+        <Footer />
       </Box>
     </>
   )
