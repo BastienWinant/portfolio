@@ -32,19 +32,5 @@ export default function Footer() {
         </LinkBox>
       </HStack>
     </Center>
-    // <Box as="footer" minH="24" borderWidth="thin">
-    //   <Container w={{md: "11/12"}} border="2px solid red">
-    //     <AbsoluteCenter borderWidth="thin" axis="both">
-    //       <Group>
-    //         <LinkBox borderWidth="medium">
-    //           <Icon>
-    //             <FaGithub />
-    //           </Icon>
-    //           <LinkOverlay href="https://github.com/BastienWinant" target="_blank" />
-    //         </LinkBox>
-    //       </Group>
-    //     </AbsoluteCenter>
-    //   </Container>
-    // </Box>
   )
 }
