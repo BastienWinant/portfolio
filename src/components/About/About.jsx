@@ -1,4 +1,4 @@
-import { Box, Button, Card, Image, Text } from "@chakra-ui/react"
+import { Box, Button, Card, Image, Text, VStack } from "@chakra-ui/react"
 
 export default function About() {
   return (
@@ -7,19 +7,18 @@ export default function About() {
         objectFit="cover"
         src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
         alt="Caffe Latte"
+        aspectRatio={3 / 1}
+        w={{md: "2/5"}}
+        maxW={{md: "lg"}}
       />
       <Box>
         <Card.Body>
-          <Text>
-            I'm a web developer and designer based out of London, UK. I love building apps that solve real-world problems, and that are delightful to use. My specialities include TypeScript, React JS, Tailwind CSS, and Styled Components.
-          </Text>
-          <Text>
-            My background is in teaching and marketing, and I have a bachelors degree in English from Kings College. I also have five adorable cats.
-          </Text>
+          <VStack gap="8">
+            <Text lineHeight="tall">I'm a web developer and designer based out of London, UK. I love building apps that solve real-world problems, and that are delightful to use. My specialities include TypeScript, React JS, Tailwind CSS, and Styled Components.</Text>
+            <Text lineHeight="tall">My background is in teaching and marketing, and I have a bachelors degree in English from Kings College. I also have five adorable cats.</Text>
+            <Button alignSelf="flex-start">my resume</Button>
+          </VStack>
         </Card.Body>
-        <Card.Footer>
-          <Button>Buy Latte</Button>
-        </Card.Footer>
       </Box>
     </Card.Root>
   )
