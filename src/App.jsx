@@ -4,6 +4,7 @@ import Header from '@/components/Header/Header'
 import Section from '@/components/Section'
 import Hero from '@/components/Hero/Hero'
 import Project from '@/components/Project/Project'
+import About from '@/components/About/About'
 import Footer from '@/components/Footer/Footer'
 import { Box, VStack } from '@chakra-ui/react'
 
@@ -43,7 +44,9 @@ function App() {
         </Section>
         <Section ref={aboutRef}>
           <Section.Header>about me</Section.Header>
-          <Section.Body>this is the about section</Section.Body>
+          <Section.Body>
+            <About />
+          </Section.Body>
         </Section>
         <Section ref={contactRef}>
           <Section.Header>get in touch</Section.Header>
