@@ -74,8 +74,9 @@ export default function Header() {
 			<Show when={showVal}>
 				<Stack
 					direction={{base: "column", md: "row"}}
-					gap={{base: 0, md: 6}}
-					separator={<StackSeparator/>}
+					gapX={{base: 8, lg: 16}}
+					gapY={0}
+					separator={<StackSeparator hideFrom={"md"} />}
 				>
 					<LinkBox p={{base: 4, md: 0}}>
 						<Text textAlign={{base: "right", md: "center"}}>projects</Text>
