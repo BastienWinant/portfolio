@@ -33,13 +33,15 @@ export default function Header() {
 
 	return (
 		<Container
-			position={"sticky"}
+			position={"fixed"}
+			zIndex={1}
 			display={"flex"}
 			flexDir={{base: "column", md: "row"}}
 			alignItems={{md: "center"}}
 			justifyContent={{base: "center", md: "space-between"}}
 			py={{base: 0, md: 4}}
 			shadow={"md"}
+			bgColor={"bg"}
 		>
 			<HStack
 				justifyContent={"space-between"}
@@ -77,6 +79,7 @@ export default function Header() {
 					gapX={{base: 8, lg: 16}}
 					gapY={0}
 					separator={<StackSeparator hideFrom={"md"} />}
+					pb={{base: 4, md: 0}}
 				>
 					<LinkBox p={{base: 4, md: 0}}>
 						<Text textAlign={{base: "right", md: "center"}}>projects</Text>
