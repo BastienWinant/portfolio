@@ -39,7 +39,7 @@ export default function Header() {
 			alignItems={{md: "center"}}
 			justifyContent={{base: "center", md: "space-between"}}
 			py={{base: 0, md: 4}}
-			borderWidth={"thin"}
+			shadow={"md"}
 		>
 			<HStack
 				justifyContent={"space-between"}
