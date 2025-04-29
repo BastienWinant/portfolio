@@ -37,9 +37,9 @@ export default function Header() {
 			display={"flex"}
 			flexDir={{base: "column", md: "row"}}
 			alignItems={{md: "center"}}
-			justifyContent={{md: "space-between"}}
+			justifyContent={{base: "center", md: "space-between"}}
+			py={{base: 0, md: 4}}
 			borderWidth={"thin"}
-			minH={16}
 		>
 			<HStack
 				justifyContent={"space-between"}
