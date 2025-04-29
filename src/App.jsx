@@ -1,10 +1,13 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router"
 import Header from "@/components/header/Header.jsx"
 
 function App() {
   return (
-    <>
-      <Header />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Header />} />
+      </Routes>
+    </Router>
   )
 }
 
