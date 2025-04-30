@@ -1,6 +1,6 @@
 import { Box, Container, Stack } from '@chakra-ui/react'
 
-export default function Section({children, props}) {
+export default function Section({children, ...props}) {
 	return (
 		<Box
 			as={"section"}

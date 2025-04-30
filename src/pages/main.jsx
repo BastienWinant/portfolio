@@ -5,11 +5,9 @@ import Project from "@/components/project/Project.jsx"
 
 export default function Main() {
 	return (
-		<Box
-			as="main"
-		>
+		<Box as="main">
 			<Hero />
-			<Section>
+			<Section id="projects">
 				<Section.Header>
 					projects
 				</Section.Header>
@@ -44,7 +42,7 @@ export default function Main() {
 					</VStack>
 				</Section.Body>
 			</Section>
-			<Section>
+			<Section id="about">
 				<Section.Header>
 					about me
 				</Section.Header>
@@ -76,7 +74,7 @@ export default function Main() {
 					</VStack>
 				</Section.Body>
 			</Section>
-			<Section>
+			<Section id="contact">
 				<Section.Header>
 					contact me
 				</Section.Header>
