@@ -48,18 +48,18 @@ export default function Main() {
 				</Section.Header>
 				<Section.Body>
 					<VStack>
-						<Text textAlign={"center"} maxW={"3xl"} lineHeight={"tall"}>
+						<Text textAlign={"center"} maxW={"3xl"} textStyle={"lg"}>
 							I'm a frontend developer based out of London, UK. I love building apps that solve real-world problems, and that are delightful to use. My specialities include TypeScript, React JS, Tailwind CSS, and Styled Components.
 						</Text>
 						<HStack mt={16}>
 							<Stack gap={8}>
 								<Heading as={"h3"}>Get to know me!</Heading>
-								<Text>My background is in teaching and marketing. I have a bachelors degree in English from Kings College. When I'm not coding, I take care of my five adorable cats.</Text>
+								<Text textStyle={"lg"}>My background is in teaching and marketing. I have a bachelors degree in English from Kings College. When I'm not coding, I take care of my five adorable cats.</Text>
 								<Button alignSelf={"flex-start"}>contact</Button>
 							</Stack>
 							<Stack gap={8}>
 								<Heading as={"h3"}>My skills</Heading>
-								<Wrap>
+								<Wrap gap={2}>
 									<Badge variabt={"subtle"} size={"lg"}>HTML</Badge>
 									<Badge variabt={"subtle"} size={"lg"}>CSS</Badge>
 									<Badge variabt={"subtle"} size={"lg"}>JavaScript</Badge>

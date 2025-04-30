@@ -9,25 +9,23 @@ export default function Hero() {
 			alignItems={"center"}
 			justifyContent={"center"}
 		>
-			<VStack gap={8} textAlign={"center"}>
-				<Heading size="3xl" letterSpacing="tight">
-					<Highlight query="with speed" styles={{ color: "teal.600" }}>
-						Create accessible React apps with speed
-					</Highlight>
+			<VStack gap={8} textAlign={"center"} w={"11/12"} maxW={{base: "lg", md: "xl", lg: "3xl"}}>
+				<Heading size={{base: "3xl", md: "4xl", lg: "5xl"}} letterSpacing="tight">
+					Hey, my name is Bastien Winant
 				</Heading>
-				<Text fontSize={{base: "md", md: "lg"}} color="fg.muted">
+				<Text fontSize={{base: "md", md: "lg"}} color="fg.muted" lineHeight={"tall"}>
 					<Highlight
 						ignoreCase
-						query={["simple", "accessible"]}
+						query={["react js", "tailwind css"]}
 						styles={{ color: "teal.600", fontWeight: "semibold" }}
 					>
-						Chakra UI is a simple, modular and accessible component library that
-						gives you the building blocks you need.
+						I am a passionate frontend developer based in Luxembourg. My specialities are React JS and Tailwind CSS,
+						and I love building apps that are delightful to use.
 					</Highlight>
 				</Text>
 				<LinkBox>
-					<Badge size={"lg"}>
-						see my projects
+					<Badge size={"lg"} py={3} px={6}>
+						<Text textStyle={"md"} textTransform={"uppercase"} fontWeight={"semibold"}>see my projects</Text>
 					</Badge>
 					<LinkOverlay asChild>
 						<Link to="/" />
