@@ -26,7 +26,7 @@ export default function Hero() {
 					</Highlight>
 				</Text>
 				<LinkBox>
-					<Badge size={"2xl"} px={4} py={2}>
+					<Badge size={"lg"}>
 						see my projects
 					</Badge>
 					<LinkOverlay asChild>
