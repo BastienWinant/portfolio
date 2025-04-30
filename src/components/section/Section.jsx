@@ -6,7 +6,6 @@ export default function Section({children, props}) {
 			as={"section"}
 			py={{base: 16, md: 20, lg: 24}}
 			{...props}
-			borderWidth={"thick"}
 		>
 			<Container>
 				<Stack gap={{base: 12, md: 16 }}>
