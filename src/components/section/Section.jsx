@@ -1,4 +1,4 @@
-import { Box, Container, Stack } from '@chakra-ui/react'
+import { Container, Stack } from '@chakra-ui/react'
 
 export default function Section({children, ...props}) {
 	return (
@@ -7,7 +7,7 @@ export default function Section({children, ...props}) {
 			py={{base: 16, md: 20, lg: 24}}
 			{...props}
 		>
-			<Stack>
+			<Stack gap={{base: 12, md: 16 }}>
 				{children}
 			</Stack>
 		</Container>
