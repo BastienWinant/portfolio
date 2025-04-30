@@ -1,4 +1,5 @@
-import { Container, Heading, Highlight, VStack, Text, Button } from "@chakra-ui/react"
+import {Container, Heading, Highlight, VStack, Text, LinkBox, LinkOverlay, Badge} from "@chakra-ui/react"
+import { Link } from "react-router"
 
 export default function Hero() {
 	return (
@@ -7,30 +8,31 @@ export default function Hero() {
 			display={"flex"}
 			alignItems={"center"}
 			justifyContent={"center"}
-			borderWidth={"thick"}
 		>
-			<VStack
-				gap={{base: "5vh"}}
-				textAlign={"center"}
-				borderWidth={"thick"}
-			>
-				<Heading
-					size={{base: "3xl", md: "4xl", lg: "5xl"}}
-					fontWeight={"bold"}
-				>
-					Hey, my name is Bastien Winant
+			<VStack gap={8} textAlign={"center"}>
+				<Heading size="3xl" letterSpacing="tight">
+					<Highlight query="with speed" styles={{ color: "teal.600" }}>
+						Create accessible React apps with speed
+					</Highlight>
 				</Heading>
-				<Text fontSize="md" color="fg.muted" lineHeight={"tall"}>
+				<Text fontSize={{base: "md", md: "lg"}} color="fg.muted">
 					<Highlight
 						ignoreCase
-						query={["react js", "tailwind css"]}
+						query={["simple", "accessible"]}
 						styles={{ color: "teal.600", fontWeight: "semibold" }}
 					>
-						I am a passionate frontend developer based in London, UK.
-						My specialities are React JS and Tailwind CSS, and I love building apps that are delightful to use.
+						Chakra UI is a simple, modular and accessible component library that
+						gives you the building blocks you need.
 					</Highlight>
 				</Text>
-				<Button size={"xl"} mt={2}>See my projects</Button>
+				<LinkBox>
+					<Badge size={"2xl"} px={4} py={2}>
+						see my projects
+					</Badge>
+					<LinkOverlay asChild>
+						<Link to="/" />
+					</LinkOverlay>
+				</LinkBox>
 			</VStack>
 		</Container>
 	)

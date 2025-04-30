@@ -1,10 +1,10 @@
 import { VStack, Heading, Box } from "@chakra-ui/react";
 export default function Header({children}) {
 	return (
-		<VStack as={"header"} borderWidth={"thin"} gap={"6"}>
+		<VStack as={"header"} borderWidth={"thin"} gap={{base: 4, md: 6}}>
 			<Heading
 				as={"h2"}
-				size={{base: "3xl"}}
+				size={{base: "2xl", md: "3xl"}}
 				textTransform={"uppercase"}
 				fontWeight={"bold"}
 			>{children}</Heading>

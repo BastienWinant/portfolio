@@ -40,7 +40,7 @@ export default function Header() {
 			alignItems={{md: "center"}}
 			justifyContent={{base: "center", md: "space-between"}}
 			py={{base: 0, md: 4}}
-			shadow={"md"}
+			shadow={"sm"}
 			bgColor={"bg"}
 		>
 			<HStack
@@ -73,8 +73,11 @@ export default function Header() {
 					{open ? <FaXmark /> : <FaBars />}
 				</IconButton>
 			</HStack>
+
+			{/*collapsible nav*/}
 			<Show when={showVal}>
 				<Stack
+					as={"nav"}
 					direction={{base: "column", md: "row"}}
 					gapX={{base: 8, lg: 16}}
 					gapY={0}
