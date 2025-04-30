@@ -1,4 +1,4 @@
-import { Card, Image, Box, Wrap, Badge, LinkBox, LinkOverlay} from "@chakra-ui/react"
+import { Card, Image, Flex, Wrap, Badge, LinkBox, LinkOverlay} from "@chakra-ui/react"
 import {Link} from "react-router"
 import {nanoid} from "nanoid"
 
@@ -14,9 +14,9 @@ export default function Project(props) {
 				src={imgUrl}
 				alt="Green double couch with wooden legs"
 			/>
-			<Box>
-				<Card.Body>
-					<Card.Title textTransform={"capitalize"} mb="2">{title}</Card.Title>
+			<Flex direction={"column"} justifyContent={"center"} border={"2px solid red"}>
+				<Card.Body borderWidth={"medium"} flexGrow={0}>
+					<Card.Title mb="2" textTransform={"capitalize"}>{title}</Card.Title>
 					<Card.Description>
 						{description}
 					</Card.Description>
@@ -24,15 +24,15 @@ export default function Project(props) {
 						{techStack.map(tech => <Badge key={nanoid()}>{tech}</Badge>)}
 					</Wrap>
 				</Card.Body>
-				<Card.Footer>
+				<Card.Footer borderWidth={"medium"}>
 					<LinkBox>
-						<Badge variant={"solid"} size={"lg"}>learn more</Badge>
+						<Badge size="lg" variant={"solid"}>learn more</Badge>
 						<LinkOverlay asChild>
 							<Link to="/" />
 						</LinkOverlay>
 					</LinkBox>
 				</Card.Footer>
-			</Box>
+			</Flex>
 		</Card.Root>
 	)
 }
