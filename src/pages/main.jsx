@@ -1,4 +1,4 @@
-import { Box, VStack, Text } from  '@chakra-ui/react'
+import {Box, Text, Stack, VStack, HStack, Heading, Wrap, Badge, Button} from '@chakra-ui/react'
 import Hero from '@/components/hero/Hero.jsx'
 import Section from '@/components/section/index.jsx'
 import Project from "@/components/project/Project.jsx"
@@ -49,7 +49,31 @@ export default function Main() {
 					about me
 				</Section.Header>
 				<Section.Body>
-					this is the body of the about me section
+					<VStack>
+						<Text textAlign={"center"} maxW={"3xl"} lineHeight={"tall"}>
+							I'm a frontend developer based out of London, UK. I love building apps that solve real-world problems, and that are delightful to use. My specialities include TypeScript, React JS, Tailwind CSS, and Styled Components.
+						</Text>
+						<HStack mt={16}>
+							<Stack gap={8}>
+								<Heading as={"h3"}>Get to know me!</Heading>
+								<Text>My background is in teaching and marketing. I have a bachelors degree in English from Kings College. When I'm not coding, I take care of my five adorable cats.</Text>
+								<Button alignSelf={"flex-start"}>contact</Button>
+							</Stack>
+							<Stack gap={8}>
+								<Heading as={"h3"}>My skills</Heading>
+								<Wrap>
+									<Badge variabt={"subtle"} size={"lg"}>HTML</Badge>
+									<Badge variabt={"subtle"} size={"lg"}>CSS</Badge>
+									<Badge variabt={"subtle"} size={"lg"}>JavaScript</Badge>
+									<Badge variabt={"subtle"} size={"lg"}>React</Badge>
+									<Badge variabt={"subtle"} size={"lg"}>TypeScript</Badge>
+									<Badge variabt={"subtle"} size={"lg"}>Git</Badge>
+									<Badge variabt={"subtle"} size={"lg"}>Tailwind CSS</Badge>
+									<Badge variabt={"subtle"} size={"lg"}>Jasmine</Badge>
+								</Wrap>
+							</Stack>
+						</HStack>
+					</VStack>
 				</Section.Body>
 			</Section>
 			<Section>
