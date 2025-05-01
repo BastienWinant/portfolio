@@ -7,9 +7,12 @@ import {
 	LinkBox,
 	LinkOverlay,
 	Badge,
-	StackSeparator
+	StackSeparator,
+	IconButton
 } from "@chakra-ui/react"
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { Link } from "react-router"
+import {FaLinkedin} from "react-icons/fa";
 
 export default function Hero() {
 	return (
@@ -47,14 +50,20 @@ export default function Hero() {
 				pos={"absolute"}
 				left={0}
 				separator={<StackSeparator />}
+				gap={0}
 				borderWidth={"thin"}
+				hideBelow={"md"}
 			>
 				<LinkBox>
-					Github link
+					<IconButton size={"2xl"} variant={"plain"}>
+						<FaGithub />
+					</IconButton>
 					<LinkOverlay href={"https://github.com/BastienWinant"} target="_blank" />
 				</LinkBox>
 				<LinkBox>
-					Linkedin Link
+					<IconButton size={"2xl"} variant={"plain"}>
+						<FaLinkedin />
+					</IconButton>
 					<LinkOverlay href={"https://linkedin.com/in/winant"} target={"_blank"} />
 				</LinkBox>
 			</VStack>
