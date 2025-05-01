@@ -1,4 +1,14 @@
-import {Container, Heading, Highlight, VStack, Text, LinkBox, LinkOverlay, Badge} from "@chakra-ui/react"
+import {
+	Container,
+	Heading,
+	Highlight,
+	VStack,
+	Text,
+	LinkBox,
+	LinkOverlay,
+	Badge,
+	StackSeparator
+} from "@chakra-ui/react"
 import { Link } from "react-router"
 
 export default function Hero() {
@@ -8,6 +18,7 @@ export default function Hero() {
 			display={"flex"}
 			alignItems={"center"}
 			justifyContent={"center"}
+			pos={"relative"}
 		>
 			<VStack gap={8} textAlign={"center"} w={"11/12"} maxW={{base: "lg", md: "xl", lg: "3xl"}}>
 				<Heading size={{base: "3xl", md: "4xl", lg: "5xl"}} letterSpacing="tight">
@@ -30,6 +41,21 @@ export default function Hero() {
 					<LinkOverlay asChild>
 						<Link to="/" />
 					</LinkOverlay>
+				</LinkBox>
+			</VStack>
+			<VStack
+				pos={"absolute"}
+				left={0}
+				separator={<StackSeparator />}
+				borderWidth={"thin"}
+			>
+				<LinkBox>
+					Github link
+					<LinkOverlay href={"https://github.com/BastienWinant"} target="_blank" />
+				</LinkBox>
+				<LinkBox>
+					Linkedin Link
+					<LinkOverlay href={"https://linkedin.com/in/winant"} target={"_blank"} />
 				</LinkBox>
 			</VStack>
 		</Container>
