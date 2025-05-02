@@ -4,12 +4,12 @@ import {
 	Stack,
 	Heading,
 	Text,
-	HStack,
 	IconButton,
 	LinkBox,
-	LinkOverlay
+	LinkOverlay,
+	ButtonGroup
 } from "@chakra-ui/react"
-import { FaGithub, FaLinkedinIn, FaXing, FaStackOverflow } from "react-icons/fa6"
+import { FaGithub, FaLinkedinIn, FaXing, FaBluesky, FaStackOverflow } from "react-icons/fa6"
 
 export default function Footer() {
 	return (
@@ -18,11 +18,12 @@ export default function Footer() {
 				direction={{base: "column", md: "row-reverse"}}
 				justify={"space-between"}
 				gapY={12}
+				gapX={16}
 				py={16}
 			>
 				<Stack gap={4}>
 					<Heading as={"h2"}>Social</Heading>
-					<HStack gap={0} mx={-4}>
+					<ButtonGroup mx={-4}>
 						<LinkBox>
 							<IconButton variant={"plain"} size={"xl"}>
 								<FaGithub />
@@ -43,11 +44,17 @@ export default function Footer() {
 						</LinkBox>
 						<LinkBox>
 							<IconButton variant={"plain"} size={"xl"}>
+								<FaBluesky />
+							</IconButton>
+							<LinkOverlay href={"https://bluesky.com"} target={"_blank"} />
+						</LinkBox>
+						<LinkBox>
+							<IconButton variant={"plain"} size={"xl"}>
 								<FaStackOverflow />
 							</IconButton>
 							<LinkOverlay href={"https://stackoverflow.com"} target={"_blank"} />
 						</LinkBox>
-					</HStack>
+					</ButtonGroup>
 				</Stack>
 				<Stack gap={4}>
 					<Heading as={"h2"}>Bastien Winant</Heading>
