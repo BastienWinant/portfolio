@@ -58,7 +58,7 @@ export default function Main() {
 				</Section.Header>
 				<Section.Body>
 					<VStack gap={20}>
-						<Text textAlign={"center"} maxW={"3xl"} textStyle={"lg"}>
+						<Text textAlign={"center"} maxW={"3xl"}>
 							I'm a frontend developer based out of London, UK. I love building apps that solve real-world problems, and that are delightful to use. My specialities include TypeScript, React JS, Tailwind CSS, and Styled Components.
 						</Text>
 						<SimpleGrid
@@ -67,7 +67,7 @@ export default function Main() {
 						>
 							<Stack gap={8}>
 								<Heading as={"h3"}>Get to know me!</Heading>
-								<Text textStyle={"lg"} maxW={"2xl"}>My background is in teaching and marketing. I have a bachelors degree in English from Kings College. When I'm not coding, I take care of my five adorable cats.</Text>
+								<Text maxW={"2xl"}>My background is in teaching and marketing. I have a bachelors degree in English from Kings College. When I'm not coding, I take care of my five adorable cats.</Text>
 								<Button alignSelf={"flex-start"}>contact</Button>
 							</Stack>
 							<Stack gap={8}>
