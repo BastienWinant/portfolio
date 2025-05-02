@@ -1,4 +1,13 @@
-import {Box, Text, Stack, VStack, HStack, Heading, Wrap, Badge, Button} from '@chakra-ui/react'
+import {
+	Box,
+	Text,
+	Stack,
+	VStack,
+	Heading,
+	Wrap,
+	Badge,
+	Button
+} from '@chakra-ui/react'
 import Hero from '@/components/hero/Hero.jsx'
 import Section from '@/components/section/index.jsx'
 import Project from "@/components/project/Project.jsx"
@@ -63,14 +72,14 @@ export default function Main() {
 							<Stack gap={8}>
 								<Heading as={"h3"}>My skills</Heading>
 								<Wrap gap={2}>
-									<Badge variabt={"subtle"} size={"lg"}>HTML</Badge>
-									<Badge variabt={"subtle"} size={"lg"}>CSS</Badge>
-									<Badge variabt={"subtle"} size={"lg"}>JavaScript</Badge>
-									<Badge variabt={"subtle"} size={"lg"}>React</Badge>
-									<Badge variabt={"subtle"} size={"lg"}>TypeScript</Badge>
-									<Badge variabt={"subtle"} size={"lg"}>Git</Badge>
-									<Badge variabt={"subtle"} size={"lg"}>Tailwind CSS</Badge>
-									<Badge variabt={"subtle"} size={"lg"}>Jasmine</Badge>
+									<Badge variabt={"subtle"} size={"lg"} px={6} py={3} fontWeight={"semibold"}>HTML</Badge>
+									<Badge variabt={"subtle"} size={"lg"} px={6} py={3} fontWeight={"semibold"}>CSS</Badge>
+									<Badge variabt={"subtle"} size={"lg"} px={6} py={3} fontWeight={"semibold"}>JavaScript</Badge>
+									<Badge variabt={"subtle"} size={"lg"} px={6} py={3} fontWeight={"semibold"}>React</Badge>
+									<Badge variabt={"subtle"} size={"lg"} px={6} py={3} fontWeight={"semibold"}>TypeScript</Badge>
+									<Badge variabt={"subtle"} size={"lg"} px={6} py={3} fontWeight={"semibold"}>Git</Badge>
+									<Badge variabt={"subtle"} size={"lg"} px={6} py={3} fontWeight={"semibold"}>Tailwind CSS</Badge>
+									<Badge variabt={"subtle"} size={"lg"} px={6} py={3} fontWeight={"semibold"}>Jasmine</Badge>
 								</Wrap>
 							</Stack>
 						</Stack>
