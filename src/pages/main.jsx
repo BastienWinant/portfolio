@@ -6,7 +6,8 @@ import {
 	Heading,
 	Wrap,
 	Badge,
-	Button
+	Button,
+	SimpleGrid
 } from '@chakra-ui/react'
 import Hero from '@/components/hero/Hero.jsx'
 import Section from '@/components/section/index.jsx'
@@ -60,8 +61,8 @@ export default function Main() {
 						<Text textAlign={"center"} maxW={"3xl"} textStyle={"lg"}>
 							I'm a frontend developer based out of London, UK. I love building apps that solve real-world problems, and that are delightful to use. My specialities include TypeScript, React JS, Tailwind CSS, and Styled Components.
 						</Text>
-						<Stack
-							direction={{base: "column", md: "row"}}
+						<SimpleGrid
+							columns={{base: 1, md: 2}}
 							gap={16}
 						>
 							<Stack gap={8}>
@@ -71,7 +72,7 @@ export default function Main() {
 							</Stack>
 							<Stack gap={8}>
 								<Heading as={"h3"}>My skills</Heading>
-								<Wrap gap={2}>
+								<Wrap gap={3}>
 									<Badge variabt={"subtle"} size={"lg"} px={6} py={3} fontWeight={"semibold"}>HTML</Badge>
 									<Badge variabt={"subtle"} size={"lg"} px={6} py={3} fontWeight={"semibold"}>CSS</Badge>
 									<Badge variabt={"subtle"} size={"lg"} px={6} py={3} fontWeight={"semibold"}>JavaScript</Badge>
@@ -82,7 +83,7 @@ export default function Main() {
 									<Badge variabt={"subtle"} size={"lg"} px={6} py={3} fontWeight={"semibold"}>Jasmine</Badge>
 								</Wrap>
 							</Stack>
-						</Stack>
+						</SimpleGrid>
 					</VStack>
 				</Section.Body>
 			</Section>
