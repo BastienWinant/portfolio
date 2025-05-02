@@ -10,9 +10,8 @@ import {
 	StackSeparator,
 	IconButton
 } from "@chakra-ui/react"
-import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import { FaGithub, FaLinkedinIn, FaXing, FaBluesky, FaStackOverflow } from "react-icons/fa6";
 import { Link } from "react-router"
-import {FaLinkedin} from "react-icons/fa";
 
 export default function Hero() {
 	return (
@@ -62,7 +61,25 @@ export default function Hero() {
 				</LinkBox>
 				<LinkBox>
 					<IconButton size={"2xl"} variant={"plain"}>
-						<FaLinkedin />
+						<FaLinkedinIn />
+					</IconButton>
+					<LinkOverlay href={"https://linkedin.com/in/winant"} target={"_blank"} />
+				</LinkBox>
+				<LinkBox>
+					<IconButton size={"2xl"} variant={"ghost"}>
+						<FaXing />
+					</IconButton>
+					<LinkOverlay href={"https://linkedin.com/in/winant"} target={"_blank"} />
+				</LinkBox>
+				<LinkBox>
+					<IconButton size={"2xl"} variant={"ghost"}>
+						<FaBluesky />
+					</IconButton>
+					<LinkOverlay href={"https://linkedin.com/in/winant"} target={"_blank"} />
+				</LinkBox>
+				<LinkBox>
+					<IconButton size={"2xl"} variant={"ghost"}>
+						<FaStackOverflow />
 					</IconButton>
 					<LinkOverlay href={"https://linkedin.com/in/winant"} target={"_blank"} />
 				</LinkBox>
