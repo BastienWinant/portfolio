@@ -92,7 +92,7 @@ export default function Main() {
 				<Section.Header>contact me</Section.Header>
 				<Section.Body>
 					<Center>
-						<Text textAlign={"center"} maxW={"2xl"}>Please reach out if you have any questions! I'm happy to jump on a video call to brainstorm projects and ideas. Send me an email at jane@example.com or call me directly at +123456789</Text>
+						<Text textAlign={"center"} lineHeight={"tall"} maxW={"2xl"}>Please reach out if you have any questions! I'm happy to jump on a video call to brainstorm projects and ideas. Send me an email at jane@example.com or call me directly at +123456789</Text>
 					</Center>
 				</Section.Body>
 			</Section>
