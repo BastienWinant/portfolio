@@ -1,14 +1,15 @@
 import { Box, HStack, Avatar, Stack, Text } from "@chakra-ui/react"
+import avatarImg from '@/assets/img/profile.png'
 
 export default function Header() {
 	return (
 			<Box borderWidth="4px">
-				<HStack gap="4">
-					<Avatar.Root size="xl">
+				<HStack gap="4" border="3px solid red">
+					<Avatar.Root>
 						<Avatar.Fallback name="Bastien Winant" />
-						<Avatar.Image src="https://images.unsplash.com/photo-1745177717290-9ce463cdc5e1" />
+						<Avatar.Image src={avatarImg} />
 					</Avatar.Root>
-					<Stack gap="0">
+					<Stack>
 						<Text fontWeight="medium">Bastien Winant</Text>
 					</Stack>
 				</HStack>
