@@ -7,7 +7,8 @@ import {
 	Wrap,
 	Badge,
 	Button,
-	SimpleGrid
+	SimpleGrid,
+	Center
 } from '@chakra-ui/react'
 import Hero from '@/components/hero/Hero.jsx'
 import Section from '@/components/section/index.jsx'
@@ -88,11 +89,11 @@ export default function Main() {
 				</Section.Body>
 			</Section>
 			<Section id="contact">
-				<Section.Header>
-					contact me
-				</Section.Header>
+				<Section.Header>contact me</Section.Header>
 				<Section.Body>
-					this is the body of the contact section
+					<Center>
+						<Text textAlign={"center"} lineHeight={"tall"} maxW={"2xl"}>Please reach out if you have any questions! I'm happy to jump on a video call to brainstorm projects and ideas. Send me an email at jane@example.com or call me directly at +123456789</Text>
+					</Center>
 				</Section.Body>
 			</Section>
 		</Box>
