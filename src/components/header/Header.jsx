@@ -4,8 +4,9 @@ import HashLink from "@/components/hashLink/HashLink.jsx";
 export default function Header() {
 	return (
 			<Box
-					position="sticky"
+					position="fixed"
 					top="0"
+					w="100vw"
 					border="2px solid blue"
 			>
 				<Stack direction={{base: "column", md: "row"}} gap="0">
