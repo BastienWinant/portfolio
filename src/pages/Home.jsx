@@ -1,5 +1,17 @@
+import { Box } from "@chakra-ui/react";
+
 export default function Home() {
 	return (
-			<h1>this is the home page</h1>
+			<Box as="main" border="2px solid orange">
+				<Box as="section" id="projects" borderWidth="medium" h="96">
+					section 1
+				</Box>
+				<Box as="section" id="about" borderWidth="medium" h="96">
+					section 2
+				</Box>
+				<Box as="section" id="contact" borderWidth="medium" h="96">
+					section 3
+				</Box>
+			</Box>
 	)
 }
