@@ -1,5 +1,6 @@
-import {Flex, Stack, Link, HStack, Avatar, Text, StackSeparator} from "@chakra-ui/react";
+import {Flex, Stack, Link, HStack, Avatar, Text, StackSeparator, IconButton} from "@chakra-ui/react";
 import { NavLink } from "react-router";
+import { FaBars } from "react-icons/fa6";
 
 export default function Header() {
 	return (
@@ -12,29 +13,31 @@ export default function Header() {
 					justify={{base: "flex-start", md: "space-between"}}
 					py="2"
 					pb={{base: 0, md: 2}}
-					border="2px solid blue"
 			>
-				<HStack gap="3">
-					<Avatar.Root>
-						<Avatar.Fallback name="Bastien Winant" />
-						<Avatar.Image src="https://images.unsplash.com/photo-1750378057935-ec216313425a" />
-					</Avatar.Root>
-					<Text fontWeight="medium">Bastien Winant</Text>
-				</HStack>
+				<Flex flexGrow="1" justify="space-between">
+					<HStack gap="3">
+						<Avatar.Root>
+							<Avatar.Fallback name="Bastien Winant" />
+							<Avatar.Image src="https://images.unsplash.com/photo-1750378057935-ec216313425a" />
+						</Avatar.Root>
+						<Text fontWeight="medium">Bastien Winant</Text>
+					</HStack>
+					<IconButton aria-label="Toggle nav" hideFrom="md">
+						<FaBars />
+					</IconButton>
+				</Flex>
 				<Stack
 						direction={{base: "column", md: "row"}}
 						gap="0"
 						gapX="10"
 						separator={<StackSeparator hideFrom="md" />}
-						// border="2px solid orange"
 				>
 					<Link
 							display="flex"
 							justifyContent={{base: "flex-end", md: "center"}}
-							px="2"
+							px="1"
 							py={{base: 3, md: 2}}
 							asChild
-							// border="1px solid green;"
 					>
 						<NavLink to={{pathname: "/"}}>
 							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">home</Text>
@@ -43,10 +46,9 @@ export default function Header() {
 					<Link
 							display="flex"
 							justifyContent={{base: "flex-end", md: "center"}}
-							px="2"
+							px="1"
 							py={{base: 3, md: 2}}
 							asChild
-							// border="1px solid green;"
 					>
 						<NavLink to={{pathname: "/", hash: "#projects"}}>
 							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">projects</Text>
@@ -55,10 +57,9 @@ export default function Header() {
 					<Link
 							display="flex"
 							justifyContent={{base: "flex-end", md: "center"}}
-							px="2"
+							px="1"
 							py={{base: 3, md: 2}}
 							asChild
-							// border="1px solid green;"
 					>
 						<NavLink to={{pathname: "/", hash: "#about"}}>
 							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">about</Text>
@@ -67,10 +68,9 @@ export default function Header() {
 					<Link
 							display="flex"
 							justifyContent={{base: "flex-end", md: "center"}}
-							px="2"
+							px="1"
 							py={{base: 3, md: 2}}
 							asChild
-							// border="1px solid green;"
 					>
 						<NavLink to={{pathname: "/", hash: "#contact"}}>
 							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">contact</Text>
