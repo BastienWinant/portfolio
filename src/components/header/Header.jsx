@@ -1,28 +1,82 @@
-import { Box, Stack, Link } from "@chakra-ui/react";
+import {Flex, Stack, Link, HStack, Avatar, Text, StackSeparator} from "@chakra-ui/react";
 import { NavLink } from "react-router";
 
 export default function Header() {
 	return (
-			<Box
+			<Flex
 					position="fixed"
 					top="0"
 					w="100vw"
+					direction={{base: "column", md: "row"}}
+					align={{base: "stretch", md: "center"}}
+					justify={{base: "flex-start", md: "space-between"}}
+					py="2"
+					pb={{base: 0, md: 2}}
 					border="2px solid blue"
 			>
-				<Stack direction={{base: "column", md: "row"}} gap="0">
-					<Link asChild>
-						<NavLink to={{pathname: "/"}}>home</NavLink>
+				<HStack gap="3">
+					<Avatar.Root>
+						<Avatar.Fallback name="Bastien Winant" />
+						<Avatar.Image src="https://images.unsplash.com/photo-1750378057935-ec216313425a" />
+					</Avatar.Root>
+					<Text fontWeight="medium">Bastien Winant</Text>
+				</HStack>
+				<Stack
+						direction={{base: "column", md: "row"}}
+						gap="0"
+						gapX="10"
+						separator={<StackSeparator hideFrom="md" />}
+						// border="2px solid orange"
+				>
+					<Link
+							display="flex"
+							justifyContent={{base: "flex-end", md: "center"}}
+							px="2"
+							py={{base: 3, md: 2}}
+							asChild
+							// border="1px solid green;"
+					>
+						<NavLink to={{pathname: "/"}}>
+							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">home</Text>
+						</NavLink>
 					</Link>
-					<Link asChild>
-						<NavLink to={{pathname: "/", hash: "#projects"}}>projects</NavLink>
+					<Link
+							display="flex"
+							justifyContent={{base: "flex-end", md: "center"}}
+							px="2"
+							py={{base: 3, md: 2}}
+							asChild
+							// border="1px solid green;"
+					>
+						<NavLink to={{pathname: "/", hash: "#projects"}}>
+							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">projects</Text>
+						</NavLink>
 					</Link>
-					<Link asChild>
-						<NavLink to={{pathname: "/", hash: "#about"}}>about</NavLink>
+					<Link
+							display="flex"
+							justifyContent={{base: "flex-end", md: "center"}}
+							px="2"
+							py={{base: 3, md: 2}}
+							asChild
+							// border="1px solid green;"
+					>
+						<NavLink to={{pathname: "/", hash: "#about"}}>
+							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">about</Text>
+						</NavLink>
 					</Link>
-					<Link asChild>
-						<NavLink to={{pathname: "/", hash: "#contact"}}>contact</NavLink>
+					<Link
+							display="flex"
+							justifyContent={{base: "flex-end", md: "center"}}
+							px="2"
+							py={{base: 3, md: 2}}
+							asChild
+							// border="1px solid green;"
+					>
+						<NavLink to={{pathname: "/", hash: "#contact"}}>
+							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">contact</Text>
+						</NavLink>
 					</Link>
 				</Stack>
-			</Box>
+			</Flex>
 	)
 }
