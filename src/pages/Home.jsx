@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { useLocation } from "react-router";
-import { useEffect} from "react";
+import { useEffect } from "react";
 import Section from "@/components/section/Section.jsx";
 
 export default function Home() {
@@ -13,6 +13,12 @@ export default function Home() {
 				// Smooth scroll to the element
 				element.scrollIntoView({ behavior: "smooth" });
 			}
+		} else {
+			window.scrollTo({
+				top: 0,
+				left: 0,
+				behavior: "smooth",
+			});
 		}
 	}, [location]);
 

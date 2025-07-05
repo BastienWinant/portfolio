@@ -10,10 +10,6 @@ export default function Header() {
 					border="2px solid blue"
 			>
 				<Stack direction={{base: "column", md: "row"}} gap="0">
-					{/*<HashLink ref={homeRef}>home</HashLink>*/}
-					{/*<HashLink ref={projectsRef}>projects</HashLink>*/}
-					{/*<HashLink ref={aboutRef}>about</HashLink>*/}
-					{/*<HashLink ref={contactRef}>contact</HashLink>*/}
 					<Link asChild>
 						<NavLink to={{pathname: "/"}}>home</NavLink>
 					</Link>
