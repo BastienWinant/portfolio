@@ -1,5 +1,5 @@
-import {Flex, Stack, Link, HStack, Avatar, Text, StackSeparator, IconButton} from "@chakra-ui/react";
-import { NavLink } from "react-router";
+import {Flex, Stack, Link as ChakraLink, LinkBox, LinkOverlay, Avatar, Text, StackSeparator, IconButton} from "@chakra-ui/react";
+import { NavLink, Link } from "react-router";
 import { FaBars } from "react-icons/fa6";
 
 export default function Header() {
@@ -15,13 +15,15 @@ export default function Header() {
 					pb={{base: 0, md: 2}}
 			>
 				<Flex flexGrow="1" justify="space-between">
-					<HStack gap="3">
+					<LinkBox display="flex" alignItems="center" gap="3" borderWidth="medium">
 						<Avatar.Root>
 							<Avatar.Fallback name="Bastien Winant" />
 							<Avatar.Image src="https://images.unsplash.com/photo-1750378057935-ec216313425a" />
 						</Avatar.Root>
-						<Text fontWeight="medium">Bastien Winant</Text>
-					</HStack>
+						<LinkOverlay asChild>
+							<Link to="/"><Text fontWeight="medium">Bastien Winant</Text></Link>
+						</LinkOverlay>
+					</LinkBox>
 					<IconButton aria-label="Toggle nav" hideFrom="md">
 						<FaBars />
 					</IconButton>
@@ -32,7 +34,7 @@ export default function Header() {
 						gapX="10"
 						separator={<StackSeparator hideFrom="md" />}
 				>
-					<Link
+					<ChakraLink
 							display="flex"
 							justifyContent={{base: "flex-end", md: "center"}}
 							px="1"
@@ -42,8 +44,8 @@ export default function Header() {
 						<NavLink to={{pathname: "/"}}>
 							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">home</Text>
 						</NavLink>
-					</Link>
-					<Link
+					</ChakraLink>
+					<ChakraLink
 							display="flex"
 							justifyContent={{base: "flex-end", md: "center"}}
 							px="1"
@@ -53,8 +55,8 @@ export default function Header() {
 						<NavLink to={{pathname: "/", hash: "#projects"}}>
 							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">projects</Text>
 						</NavLink>
-					</Link>
-					<Link
+					</ChakraLink>
+					<ChakraLink
 							display="flex"
 							justifyContent={{base: "flex-end", md: "center"}}
 							px="1"
@@ -64,8 +66,8 @@ export default function Header() {
 						<NavLink to={{pathname: "/", hash: "#about"}}>
 							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">about</Text>
 						</NavLink>
-					</Link>
-					<Link
+					</ChakraLink>
+					<ChakraLink
 							display="flex"
 							justifyContent={{base: "flex-end", md: "center"}}
 							px="1"
@@ -75,7 +77,7 @@ export default function Header() {
 						<NavLink to={{pathname: "/", hash: "#contact"}}>
 							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">contact</Text>
 						</NavLink>
-					</Link>
+					</ChakraLink>
 				</Stack>
 			</Flex>
 	)
