@@ -1,13 +1,14 @@
 import { Button } from "@chakra-ui/react";
-import { useNavigate } from "react-router";
+import { useNavigate, useLocation } from "react-router";
 
-export default function HashLink(props) {
-	const navigate = useNavigate();
-	const { path, ref } = props;
+export default function HashLink() {
+	const location = useLocation();
+	let navigate = useNavigate();
 
 	function scrollToRef() {
-		navigate(path);
-		// TODO: scroll into view of the ref
+		if (location.pathname !== "/") {
+			navigate("/")
+		}
 	}
 
 	return (
