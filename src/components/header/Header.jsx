@@ -20,9 +20,11 @@ export default function Header() {
 
 	useEffect(() => {
 		function watchWindowWidth() {
+			setExpanded(false);
 			setWindowWidth(window.innerWidth);
 		}
 		window.addEventListener("resize", watchWindowWidth);
+		setExpanded(window.innerWidth >= 768)
 		return () => window.removeEventListener("resize", watchWindowWidth);
 	}, []);
 
@@ -34,12 +36,12 @@ export default function Header() {
 					position="fixed"
 					top="0"
 					w="100vw"
-					minH="4.25em"
 					direction={{base: "column", md: "row"}}
 					align={{base: "stretch", md: "center"}}
 					justify={{base: "flex-start", md: "space-between"}}
-					py="2"
-					border="2px solid red;"
+					py="2.5"
+					gap="2"
+					// border="2px solid red;"
 			>
 				<Flex flexGrow="1" justify="space-between" align="center">
 					<LinkBox display="flex" alignItems="center" gap="3" borderWidth="medium">
@@ -55,7 +57,7 @@ export default function Header() {
 							aria-label="Toggle nav"
 							hideFrom="md"
 							size="xl"
-							variant="outline"
+							variant="plain"
 							onClick={toggleNav}
 					>
 						{expanded ? <FaX /> : <FaBars />}
@@ -73,7 +75,7 @@ export default function Header() {
 								display="flex"
 								justifyContent={{base: "flex-end", md: "center"}}
 								px="1"
-								py={{base: 3, md: 2}}
+								py={{base: 3, md: 1}}
 								asChild
 						>
 							<NavLink to={{pathname: "/"}}>
@@ -84,7 +86,7 @@ export default function Header() {
 								display="flex"
 								justifyContent={{base: "flex-end", md: "center"}}
 								px="1"
-								py={{base: 3, md: 2}}
+								py={{base: 3, md: 1}}
 								asChild
 						>
 							<NavLink to={{pathname: "/", hash: "#projects"}}>
@@ -95,7 +97,7 @@ export default function Header() {
 								display="flex"
 								justifyContent={{base: "flex-end", md: "center"}}
 								px="1"
-								py={{base: 3, md: 2}}
+								py={{base: 3, md: 1}}
 								asChild
 						>
 							<NavLink to={{pathname: "/", hash: "#about"}}>
@@ -106,7 +108,7 @@ export default function Header() {
 								display="flex"
 								justifyContent={{base: "flex-end", md: "center"}}
 								px="1"
-								py={{base: 3, md: 2}}
+								py={{base: 3, md: 1}}
 								asChild
 						>
 							<NavLink to={{pathname: "/", hash: "#contact"}}>

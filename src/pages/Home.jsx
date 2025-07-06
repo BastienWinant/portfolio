@@ -23,7 +23,7 @@ export default function Home() {
 	}, [location]);
 
 	return (
-			<Box as="main" border="2px solid orange">
+			<Box as="main">
 				<Section id="home">section 1</Section>
 				<Section id="projects">section 2</Section>
 				<Section id="about">section 3</Section>
