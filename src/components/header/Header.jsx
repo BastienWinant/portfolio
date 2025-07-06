@@ -1,20 +1,47 @@
-import {Flex, Stack, Link as ChakraLink, LinkBox, LinkOverlay, Avatar, Text, StackSeparator, IconButton} from "@chakra-ui/react";
+import { useState, useEffect } from "react";
+import {
+	Flex,
+	Stack,
+	Avatar,
+	Link as ChakraLink,
+	Text,
+	LinkBox,
+	LinkOverlay,
+	StackSeparator,
+	IconButton,
+	Show
+} from "@chakra-ui/react";
 import { NavLink, Link } from "react-router";
-import { FaBars } from "react-icons/fa6";
+import { FaBars, FaX } from "react-icons/fa6";
 
 export default function Header() {
+	const [windowWidth, setWindowWidth] = useState(window.width);
+	const [expanded, setExpanded] = useState(false);
+
+	useEffect(() => {
+		function watchWindowWidth() {
+			setWindowWidth(window.innerWidth);
+		}
+		window.addEventListener("resize", watchWindowWidth);
+		return () => window.removeEventListener("resize", watchWindowWidth);
+	}, []);
+
+	function toggleNav() {
+		setExpanded(prevExpanded => !prevExpanded);
+	}
 	return (
 			<Flex
 					position="fixed"
 					top="0"
 					w="100vw"
+					minH="4.25em"
 					direction={{base: "column", md: "row"}}
 					align={{base: "stretch", md: "center"}}
 					justify={{base: "flex-start", md: "space-between"}}
 					py="2"
-					pb={{base: 0, md: 2}}
+					border="2px solid red;"
 			>
-				<Flex flexGrow="1" justify="space-between">
+				<Flex flexGrow="1" justify="space-between" align="center">
 					<LinkBox display="flex" alignItems="center" gap="3" borderWidth="medium">
 						<Avatar.Root>
 							<Avatar.Fallback name="Bastien Winant" />
@@ -24,61 +51,70 @@ export default function Header() {
 							<Link to="/"><Text fontWeight="medium">Bastien Winant</Text></Link>
 						</LinkOverlay>
 					</LinkBox>
-					<IconButton aria-label="Toggle nav" hideFrom="md">
-						<FaBars />
+					<IconButton
+							aria-label="Toggle nav"
+							hideFrom="md"
+							size="xl"
+							variant="outline"
+							onClick={toggleNav}
+					>
+						{expanded ? <FaX /> : <FaBars />}
 					</IconButton>
 				</Flex>
-				<Stack
-						direction={{base: "column", md: "row"}}
-						gap="0"
-						gapX="10"
-						separator={<StackSeparator hideFrom="md" />}
-				>
-					<ChakraLink
-							display="flex"
-							justifyContent={{base: "flex-end", md: "center"}}
-							px="1"
-							py={{base: 3, md: 2}}
-							asChild
+				<Show when={expanded || windowWidth >= 768}>
+					<Stack
+							direction={{base: "column", md: "row"}}
+							gap="0"
+							gapX="10"
+							separator={<StackSeparator hideFrom="md" />}
+							mb={{base: -2, md: 0}}
 					>
-						<NavLink to={{pathname: "/"}}>
-							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">home</Text>
-						</NavLink>
-					</ChakraLink>
-					<ChakraLink
-							display="flex"
-							justifyContent={{base: "flex-end", md: "center"}}
-							px="1"
-							py={{base: 3, md: 2}}
-							asChild
-					>
-						<NavLink to={{pathname: "/", hash: "#projects"}}>
-							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">projects</Text>
-						</NavLink>
-					</ChakraLink>
-					<ChakraLink
-							display="flex"
-							justifyContent={{base: "flex-end", md: "center"}}
-							px="1"
-							py={{base: 3, md: 2}}
-							asChild
-					>
-						<NavLink to={{pathname: "/", hash: "#about"}}>
-							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">about</Text>
-						</NavLink>
-					</ChakraLink>
-					<ChakraLink
-							display="flex"
-							justifyContent={{base: "flex-end", md: "center"}}
-							px="1"
-							py={{base: 3, md: 2}}
-							asChild
-					>
-						<NavLink to={{pathname: "/", hash: "#contact"}}>
-							<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">contact</Text>
-						</NavLink>
-					</ChakraLink>
-				</Stack>
+						<ChakraLink
+								display="flex"
+								justifyContent={{base: "flex-end", md: "center"}}
+								px="1"
+								py={{base: 3, md: 2}}
+								asChild
+						>
+							<NavLink to={{pathname: "/"}}>
+								<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">home</Text>
+							</NavLink>
+						</ChakraLink>
+						<ChakraLink
+								display="flex"
+								justifyContent={{base: "flex-end", md: "center"}}
+								px="1"
+								py={{base: 3, md: 2}}
+								asChild
+						>
+							<NavLink to={{pathname: "/", hash: "#projects"}}>
+								<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">projects</Text>
+							</NavLink>
+						</ChakraLink>
+						<ChakraLink
+								display="flex"
+								justifyContent={{base: "flex-end", md: "center"}}
+								px="1"
+								py={{base: 3, md: 2}}
+								asChild
+						>
+							<NavLink to={{pathname: "/", hash: "#about"}}>
+								<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">about</Text>
+							</NavLink>
+						</ChakraLink>
+						<ChakraLink
+								display="flex"
+								justifyContent={{base: "flex-end", md: "center"}}
+								px="1"
+								py={{base: 3, md: 2}}
+								asChild
+						>
+							<NavLink to={{pathname: "/", hash: "#contact"}}>
+								<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">contact</Text>
+							</NavLink>
+						</ChakraLink>
+					</Stack>
+				</Show>
 			</Flex>
 	)
 }
