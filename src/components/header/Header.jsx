@@ -39,12 +39,13 @@ export default function Header() {
 					direction={{base: "column", md: "row"}}
 					align={{base: "stretch", md: "center"}}
 					justify={{base: "flex-start", md: "space-between"}}
-					py="2.5"
-					gap="2"
-					border="2px solid red;"
+					px={{base: "4", md: "6", lg: "8"}}
+					py={{base: "3", md: "4"}}
+					shadow="md"
+					bg="bg.subtle"
 			>
 				<Flex flexGrow="1" justify="space-between" align="center">
-					<LinkBox display="flex" alignItems="center" gap="3" borderWidth="medium">
+					<LinkBox display="flex" alignItems="center" gap="3">
 						<Avatar.Root>
 							<Avatar.Fallback name="Bastien Winant" />
 							<Avatar.Image src="https://images.unsplash.com/photo-1750378057935-ec216313425a" />
@@ -57,6 +58,7 @@ export default function Header() {
 							aria-label="Toggle nav"
 							hideFrom="md"
 							size="xl"
+							mr="-4"
 							variant="plain"
 							onClick={toggleNav}
 					>
@@ -74,7 +76,7 @@ export default function Header() {
 						<ChakraLink
 								display="flex"
 								justifyContent={{base: "flex-end", md: "center"}}
-								py={{base: 3, md: 1}}
+								py={{base: 4, md: 1}}
 								asChild
 						>
 							<NavLink to={{pathname: "/"}}>
@@ -84,7 +86,7 @@ export default function Header() {
 						<ChakraLink
 								display="flex"
 								justifyContent={{base: "flex-end", md: "center"}}
-								py={{base: 3, md: 1}}
+								py={{base: 4, md: 1}}
 								asChild
 						>
 							<NavLink to={{pathname: "/", hash: "#projects"}}>
@@ -94,7 +96,7 @@ export default function Header() {
 						<ChakraLink
 								display="flex"
 								justifyContent={{base: "flex-end", md: "center"}}
-								py={{base: 3, md: 1}}
+								py={{base: 4, md: 1}}
 								asChild
 						>
 							<NavLink to={{pathname: "/", hash: "#about"}}>
@@ -104,7 +106,7 @@ export default function Header() {
 						<ChakraLink
 								display="flex"
 								justifyContent={{base: "flex-end", md: "center"}}
-								py={{base: 3, md: 1}}
+								py={{base: 4, md: 1}}
 								asChild
 						>
 							<NavLink to={{pathname: "/", hash: "#contact"}}>
