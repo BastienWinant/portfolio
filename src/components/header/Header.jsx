@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { NavLink, Link } from "react-router";
 import { FaBars, FaX } from "react-icons/fa6";
+import profileImg from "@/assets/img/profile.png";
 
 export default function Header() {
 	const [windowWidth, setWindowWidth] = useState(window.width);
@@ -49,7 +50,7 @@ export default function Header() {
 					<LinkBox display="flex" alignItems="center" gap="3">
 						<Avatar.Root>
 							<Avatar.Fallback name="Bastien Winant" />
-							<Avatar.Image src="https://images.unsplash.com/photo-1750378057935-ec216313425a" />
+							<Avatar.Image src={profileImg} />
 						</Avatar.Root>
 						<LinkOverlay asChild>
 							<Link to="/"><Text fontWeight="medium">Bastien Winant</Text></Link>
