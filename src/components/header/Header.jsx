@@ -36,7 +36,6 @@ export default function Header() {
 
 	function navigateTo(hash) {
 		setExpanded(false);
-		if (!hash) navigate("/")
 
 		navigate({
 			pathname: "/",
