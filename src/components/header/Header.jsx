@@ -78,40 +78,48 @@ export default function Header() {
 								justifyContent={{base: "flex-end", md: "center"}}
 								py={{base: 4, md: 1}}
 								asChild
+								color="fg"
+								fontWeight="semibold"
+								fontSize="sm"
+								textTransform="uppercase"
 						>
-							<NavLink to={{pathname: "/"}}>
-								<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">home</Text>
-							</NavLink>
+							<NavLink to={{pathname: "/"}}>home</NavLink>
 						</ChakraLink>
 						<ChakraLink
 								display="flex"
 								justifyContent={{base: "flex-end", md: "center"}}
 								py={{base: 4, md: 1}}
 								asChild
+								color="fg"
+								fontWeight="semibold"
+								fontSize="sm"
+								textTransform="uppercase"
 						>
-							<NavLink to={{pathname: "/", hash: "#projects"}}>
-								<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">projects</Text>
-							</NavLink>
+							<NavLink to={{pathname: "/", hash: "#projects"}}>projects</NavLink>
 						</ChakraLink>
 						<ChakraLink
 								display="flex"
 								justifyContent={{base: "flex-end", md: "center"}}
 								py={{base: 4, md: 1}}
 								asChild
+								color="fg"
+								fontWeight="semibold"
+								fontSize="sm"
+								textTransform="uppercase"
 						>
-							<NavLink to={{pathname: "/", hash: "#about"}}>
-								<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">about</Text>
-							</NavLink>
+							<NavLink to={{pathname: "/", hash: "#about"}}>about</NavLink>
 						</ChakraLink>
 						<ChakraLink
 								display="flex"
 								justifyContent={{base: "flex-end", md: "center"}}
 								py={{base: 4, md: 1}}
 								asChild
+								color="fg"
+								fontWeight="semibold"
+								fontSize="sm"
+								textTransform="uppercase"
 						>
-							<NavLink to={{pathname: "/", hash: "#contact"}}>
-								<Text fontWeight="semibold" fontSize="sm" textTransform="uppercase">contact</Text>
-							</NavLink>
+							<NavLink to={{pathname: "/", hash: "#contact"}}>contact</NavLink>
 						</ChakraLink>
 					</Stack>
 				</Show>
