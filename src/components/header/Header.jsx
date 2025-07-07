@@ -41,7 +41,7 @@ export default function Header() {
 					justify={{base: "flex-start", md: "space-between"}}
 					py="2.5"
 					gap="2"
-					// border="2px solid red;"
+					border="2px solid red;"
 			>
 				<Flex flexGrow="1" justify="space-between" align="center">
 					<LinkBox display="flex" alignItems="center" gap="3" borderWidth="medium">
@@ -74,7 +74,6 @@ export default function Header() {
 						<ChakraLink
 								display="flex"
 								justifyContent={{base: "flex-end", md: "center"}}
-								px="1"
 								py={{base: 3, md: 1}}
 								asChild
 						>
@@ -85,7 +84,6 @@ export default function Header() {
 						<ChakraLink
 								display="flex"
 								justifyContent={{base: "flex-end", md: "center"}}
-								px="1"
 								py={{base: 3, md: 1}}
 								asChild
 						>
@@ -96,7 +94,6 @@ export default function Header() {
 						<ChakraLink
 								display="flex"
 								justifyContent={{base: "flex-end", md: "center"}}
-								px="1"
 								py={{base: 3, md: 1}}
 								asChild
 						>
@@ -107,7 +104,6 @@ export default function Header() {
 						<ChakraLink
 								display="flex"
 								justifyContent={{base: "flex-end", md: "center"}}
-								px="1"
 								py={{base: 3, md: 1}}
 								asChild
 						>
