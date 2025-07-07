@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import { useLocation } from "react-router";
 import { useEffect } from "react";
+import Landing from "@/components/landing/Landing.jsx";
 import Section from "@/components/section/Section.jsx";
 
 export default function Home() {
@@ -24,10 +25,10 @@ export default function Home() {
 
 	return (
 			<Box as="main">
-				<Section id="home">section 1</Section>
-				<Section id="projects">section 2</Section>
-				<Section id="about">section 3</Section>
-				<Section id="contact">section 4</Section>
+				<Landing />
+				<Section id="projects">Projects</Section>
+				<Section id="about">About</Section>
+				<Section id="contact">Contact</Section>
 			</Box>
 	)
 }

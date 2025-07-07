@@ -34,6 +34,7 @@ export default function Header() {
 	return (
 			<Flex
 					position="fixed"
+					zIndex="1"
 					top="0"
 					w="100vw"
 					direction={{base: "column", md: "row"}}
