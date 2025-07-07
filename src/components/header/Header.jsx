@@ -3,19 +3,20 @@ import {
 	Flex,
 	Stack,
 	Avatar,
-	Link as ChakraLink,
 	Text,
 	LinkBox,
 	LinkOverlay,
 	StackSeparator,
+	Button,
 	IconButton,
 	Show
 } from "@chakra-ui/react";
-import { NavLink, Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { FaBars, FaX } from "react-icons/fa6";
 import profileImg from "@/assets/img/profile.png";
 
 export default function Header() {
+	const navigate = useNavigate();
 	const [windowWidth, setWindowWidth] = useState(window.width);
 	const [expanded, setExpanded] = useState(false);
 
@@ -32,6 +33,17 @@ export default function Header() {
 	function toggleNav() {
 		setExpanded(prevExpanded => !prevExpanded);
 	}
+
+	function navigateTo(hash) {
+		setExpanded(false);
+		if (!hash) navigate("/")
+
+		navigate({
+			pathname: "/",
+			hash: hash
+		})
+	}
+
 	return (
 			<Flex
 					position="fixed"
@@ -71,58 +83,55 @@ export default function Header() {
 					<Stack
 							direction={{base: "column", md: "row"}}
 							gap="0"
-							gapX="10"
+							gapX="4"
 							separator={<StackSeparator hideFrom="md" />}
-							mb={{base: -2, md: 0}}
+							mb={{base: -3, md: 0}}
 					>
-						<ChakraLink
+						<Button
+								variant="ghost"
 								display="flex"
-								justifyContent={{base: "flex-end", md: "center"}}
-								py={{base: 4, md: 1}}
-								asChild
-								color="fg"
-								fontWeight="semibold"
-								fontSize="sm"
+								justifyContent="flex-end"
+								size="md"
+								py={{base: 6, md: 0}}
 								textTransform="uppercase"
-						>
-							<NavLink to={{pathname: "/"}}>home</NavLink>
-						</ChakraLink>
-						<ChakraLink
+								fontWeight="bold"
+								onClick={() => navigateTo("")}
+								aria-label="Go to home page"
+						>home</Button>
+						<Button
+								variant="ghost"
 								display="flex"
-								justifyContent={{base: "flex-end", md: "center"}}
-								py={{base: 4, md: 1}}
-								asChild
-								color="fg"
-								fontWeight="semibold"
-								fontSize="sm"
+								justifyContent="flex-end"
+								size="md"
+								py={{base: 6, md: 0}}
 								textTransform="uppercase"
-						>
-							<NavLink to={{pathname: "/", hash: "#projects"}}>projects</NavLink>
-						</ChakraLink>
-						<ChakraLink
+								fontWeight="bold"
+								test="projects"
+								onClick={() => navigateTo('#projects')}
+								aria-label="Go to projects section of the home page"
+						>projects</Button>
+						<Button
+								variant="ghost"
 								display="flex"
-								justifyContent={{base: "flex-end", md: "center"}}
-								py={{base: 4, md: 1}}
-								asChild
-								color="fg"
-								fontWeight="semibold"
-								fontSize="sm"
+								justifyContent="flex-end"
+								size="md"
+								py={{base: 6, md: 0}}
 								textTransform="uppercase"
-						>
-							<NavLink to={{pathname: "/", hash: "#about"}}>about</NavLink>
-						</ChakraLink>
-						<ChakraLink
+								fontWeight="bold"
+								onClick={() => navigateTo("#about")}
+								aria-label="Go to about section of the home page"
+						>about</Button>
+						<Button
+								variant="ghost"
 								display="flex"
-								justifyContent={{base: "flex-end", md: "center"}}
-								py={{base: 4, md: 1}}
-								asChild
-								color="fg"
-								fontWeight="semibold"
-								fontSize="sm"
+								justifyContent="flex-end"
+								size="md"
+								py={{base: 6, md: 0}}
 								textTransform="uppercase"
-						>
-							<NavLink to={{pathname: "/", hash: "#contact"}}>contact</NavLink>
-						</ChakraLink>
+								fontWeight="bold"
+								onClick={() => navigateTo("#contact")}
+								aria-label="Go to contact section of the home page"
+						>contact</Button>
 					</Stack>
 				</Show>
 			</Flex>
