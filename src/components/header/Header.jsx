@@ -93,7 +93,7 @@ export default function Header() {
 								size="md"
 								py={{base: 6, md: 0}}
 								textTransform="uppercase"
-								fontWeight="bold"
+								fontWeight="semibold"
 								onClick={() => navigateTo("")}
 								aria-label="Go to home page"
 						>home</Button>
@@ -104,7 +104,7 @@ export default function Header() {
 								size="md"
 								py={{base: 6, md: 0}}
 								textTransform="uppercase"
-								fontWeight="bold"
+								fontWeight="semibold"
 								test="projects"
 								onClick={() => navigateTo('#projects')}
 								aria-label="Go to projects section of the home page"
@@ -116,7 +116,7 @@ export default function Header() {
 								size="md"
 								py={{base: 6, md: 0}}
 								textTransform="uppercase"
-								fontWeight="bold"
+								fontWeight="semibold"
 								onClick={() => navigateTo("#about")}
 								aria-label="Go to about section of the home page"
 						>about</Button>
@@ -127,7 +127,7 @@ export default function Header() {
 								size="md"
 								py={{base: 6, md: 0}}
 								textTransform="uppercase"
-								fontWeight="bold"
+								fontWeight="semibold"
 								onClick={() => navigateTo("#contact")}
 								aria-label="Go to contact section of the home page"
 						>contact</Button>
