@@ -1,9 +1,6 @@
 import { Button, Card, Image, Wrap, Flex, Badge } from "@chakra-ui/react"
 
-export default function Projects() {
-	const title="Quiz App"
-	const description = "Quizzical is a simple quiz app that lets you select alternatives and then gives you a score. It's built with functional React components."
-	const techStack = ['HTML', 'CSS', 'JavaScript', 'React']
+export default function Projects({imgUrl, title, description, techStack}) {
 	return (
 			<Card.Root
 					flexDirection={{base: "column", md: "row"}}
@@ -13,7 +10,7 @@ export default function Projects() {
 					size="lg"
 			>
 				<Image
-						src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+						src={imgUrl}
 						alt="Green double couch with wooden legs"
 						aspectRatio="2 / 1"
 						width={{md: "2/5"}}

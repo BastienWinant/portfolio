@@ -35,9 +35,24 @@ export default function Home() {
 					/>
 					<Section.Body>
 						<VStack gap="20">
-							<Project />
-							<Project />
-							<Project />
+							<Project
+									imgUrl="https://images.unsplash.com/photo-1513151233558-d860c5398176"
+									title="Quiz App"
+									description="Quizzical is a simple quiz app that lets you select alternatives and then gives you a score. It's built with functional React components."
+									techStack={['HTML', 'CSS', 'JavaScript', 'React']}
+							/>
+							<Project
+									imgUrl="https://images.unsplash.com/photo-1617380613434-7495e9b45dfb"
+									title="Himalayan Database API"
+									description="A Chrome Extension that gives you an overview over the current time, how the weather is like and how Dogecoin is performing. Interacts with multiple APIs using async JS."
+									techStack={['Python', 'Django', 'MySQL', 'AWS']}
+							/>
+							<Project
+									imgUrl="https://images.unsplash.com/photo-1724204401208-6349fc373543"
+									title="Password Generator"
+									description="An app that generates random passwords based on a few user inputs, e.g. length, types of characters, etc. Built with HTML, CSS, and vanilla JavaScript."
+									techStack={['React', 'NextJS', 'Node', 'MongoDB']}
+							/>
 						</VStack>
 					</Section.Body>
 				</Section>
