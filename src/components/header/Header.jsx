@@ -72,7 +72,7 @@ export default function Header() {
 							aria-label="Toggle nav"
 							hideFrom="md"
 							size="xl"
-							mr="-4"
+							mr="-3.5"
 							variant="plain"
 							onClick={toggleNav}
 					>
@@ -86,6 +86,7 @@ export default function Header() {
 							gapX="4"
 							separator={<StackSeparator hideFrom="md" />}
 							mb={{base: -3, md: 0}}
+							mr="-3.5"
 					>
 						<Button
 								variant="ghost"

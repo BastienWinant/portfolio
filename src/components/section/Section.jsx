@@ -5,9 +5,10 @@ export default function Section({children, ...props}) {
 			<VStack
 					as="section"
 					{...props}
-					scrollMarginTop="20"
-					borderWidth="medium"
+					scrollMarginTop="10"
 					minH="100vh"
+					px={{base: "4", md: "6", lg: "8"}}
+					py="24"
 			>
 				{children}
 			</VStack>
