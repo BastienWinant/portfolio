@@ -1,4 +1,4 @@
-import { Button, Card, Image, HStack, Badge } from "@chakra-ui/react"
+import { Button, Card, Image, Wrap, Badge } from "@chakra-ui/react"
 
 export default function Project() {
 	return (
@@ -7,19 +7,20 @@ export default function Project() {
 						src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
 						alt="Green double couch with wooden legs"
 				/>
-				<Card.Body gap="2">
-					<Card.Title>Living room Sofa</Card.Title>
+				<Card.Body gap="2" borderWidth="thin">
+					<Card.Title>Personal Dashboard</Card.Title>
 					<Card.Description>
-						This sofa is perfect for modern tropical spaces, baroque inspired
-						spaces.
+						A Chrome extension to help you focus and stay up-to-date.
 					</Card.Description>
-					<HStack mt="4">
-						<Badge>Hot</Badge>
-						<Badge>Caffeine</Badge>
-					</HStack>
+					<Wrap mt="4">
+						<Badge>HTML</Badge>
+						<Badge>CSS</Badge>
+						<Badge>JavaScript</Badge>
+						<Badge>React</Badge>
+					</Wrap>
 				</Card.Body>
 				<Card.Footer>
-					<Button>Buy Latte</Button>
+					<Button>Learn More</Button>
 				</Card.Footer>
 			</Card.Root>
 	)
