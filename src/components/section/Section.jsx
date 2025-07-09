@@ -1,9 +1,15 @@
-import { Box } from "@chakra-ui/react";
+import { VStack } from "@chakra-ui/react";
 
 export default function Section({children, ...props}) {
 	return (
-			<Box as="section" {...props} scrollMarginTop="20" borderWidth="medium" h="100vh">
+			<VStack
+					as="section"
+					{...props}
+					scrollMarginTop="20"
+					borderWidth="medium"
+					minH="100vh"
+			>
 				{children}
-			</Box>
+			</VStack>
 	)
 }

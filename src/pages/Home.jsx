@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import { useLocation } from "react-router";
 import { useEffect } from "react";
 import Landing from "@/components/landing/Landing.jsx";
-import Section from "@/components/section/Section.jsx";
+import Section from "@/components/section/index.jsx";
 
 export default function Home() {
 	const location = useLocation();
@@ -26,9 +26,18 @@ export default function Home() {
 	return (
 			<Box as="main">
 				<Landing />
-				<Section id="projects">Projects</Section>
-				<Section id="about">About</Section>
-				<Section id="contact">Contact</Section>
+				<Section id="projects">
+					<Section.Header>projects</Section.Header>
+					<Section.Body>this is the body of the projects section</Section.Body>
+				</Section>
+				<Section id="about">
+					<Section.Header>about</Section.Header>
+					<Section.Body>this is the body of the about section</Section.Body>
+				</Section>
+				<Section id="contact">
+					<Section.Header>contact</Section.Header>
+					<Section.Body>this is the body of the contact section</Section.Body>
+				</Section>
 			</Box>
 	)
 }
