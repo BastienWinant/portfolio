@@ -1,8 +1,9 @@
-import { Box } from "@chakra-ui/react";
+import { Box, VStack } from "@chakra-ui/react";
 import { useLocation } from "react-router";
 import { useEffect } from "react";
 import Landing from "@/components/landing/Landing.jsx";
 import Section from "@/components/section/index.jsx";
+import Project from "@/components/project/Project.jsx";
 
 export default function Home() {
 	const location = useLocation();
@@ -32,7 +33,11 @@ export default function Home() {
 							tagline="All my projects include links to the code and live version.
 												Click the button to learn more about each one."
 					/>
-					<Section.Body>this is the body of the projects section</Section.Body>
+					<Section.Body>
+						<VStack borderWidth="medium">
+							<Project />
+						</VStack>
+					</Section.Body>
 				</Section>
 				<Section id="about">
 					<Section.Header
