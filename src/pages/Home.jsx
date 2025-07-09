@@ -34,7 +34,9 @@ export default function Home() {
 												Click the button to learn more about each one."
 					/>
 					<Section.Body>
-						<VStack>
+						<VStack gap="20">
+							<Project />
+							<Project />
 							<Project />
 						</VStack>
 					</Section.Body>

@@ -27,7 +27,7 @@ export default function Projects() {
 						</Wrap>
 					</Card.Body>
 					<Card.Footer>
-						<Button>Buy Latte</Button>
+						<Button>Learn more</Button>
 					</Card.Footer>
 				</Flex>
 			</Card.Root>
