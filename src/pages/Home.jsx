@@ -34,7 +34,7 @@ export default function Home() {
 												Click the button to learn more about each one."
 					/>
 					<Section.Body>
-						<VStack borderWidth="medium">
+						<VStack>
 							<Project />
 						</VStack>
 					</Section.Body>
