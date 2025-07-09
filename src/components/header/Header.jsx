@@ -35,7 +35,6 @@ export default function Header() {
 	}
 
 	function navigateTo(hash) {
-		console.log(windowWidth)
 		setExpanded(windowWidth >= 768);
 
 		navigate({

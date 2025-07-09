@@ -27,15 +27,29 @@ export default function Home() {
 			<Box as="main">
 				<Landing />
 				<Section id="projects">
-					<Section.Header>projects</Section.Header>
+					<Section.Header
+							title="projects"
+							tagline="All my projects include links to the code and live version.
+												Click the button to learn more about each one."
+					/>
 					<Section.Body>this is the body of the projects section</Section.Body>
 				</Section>
 				<Section id="about">
-					<Section.Header>about</Section.Header>
+					{/*<Section.Header>about</Section.Header>*/}
+					<Section.Header
+							title="about"
+							tagline="I'm a frontend developer based out of London, UK. I love building apps that solve
+												real-world problems, and that are delightful to use. My specialities include TypeScript,
+												React JS, Tailwind CSS, and Styled Components."
+					/>
 					<Section.Body>this is the body of the about section</Section.Body>
 				</Section>
 				<Section id="contact">
-					<Section.Header>contact</Section.Header>
+					<Section.Header
+							title="contact"
+							tagline="Please reach out if you have any questions! I'm happy to jump on a video call to brainstorm
+												projects and ideas. Send me an email at jane@example.com or call me directly at +123456789"
+					/>
 					<Section.Body>this is the body of the contact section</Section.Body>
 				</Section>
 			</Box>
