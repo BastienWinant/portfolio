@@ -35,7 +35,6 @@ export default function Home() {
 					<Section.Body>this is the body of the projects section</Section.Body>
 				</Section>
 				<Section id="about">
-					{/*<Section.Header>about</Section.Header>*/}
 					<Section.Header
 							title="about"
 							tagline="I'm a frontend developer based out of London, UK. I love building apps that solve
