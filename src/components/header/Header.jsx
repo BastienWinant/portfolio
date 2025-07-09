@@ -17,7 +17,7 @@ import profileImg from "@/assets/img/profile.png";
 
 export default function Header() {
 	const navigate = useNavigate();
-	const [windowWidth, setWindowWidth] = useState(window.width);
+	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 	const [expanded, setExpanded] = useState(false);
 
 	useEffect(() => {
@@ -35,7 +35,8 @@ export default function Header() {
 	}
 
 	function navigateTo(hash) {
-		setExpanded(false);
+		console.log(windowWidth)
+		setExpanded(windowWidth >= 768);
 
 		navigate({
 			pathname: "/",
