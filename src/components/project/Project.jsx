@@ -15,7 +15,7 @@ export default function Projects({imgUrl, title, description, techStack}) {
 						aspectRatio="2 / 1"
 						width={{md: "2/5"}}
 				/>
-				<Flex direction="column" justify="center" flexGrow="1">
+				<Flex direction="column" justify="center" flexGrow="1" pr={{ base: 0, md: 4}}>
 					<Card.Body gap="2" flexGrow="0">
 						<Card.Title>{title}</Card.Title>
 						<Card.Description>{description}</Card.Description>

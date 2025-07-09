@@ -44,7 +44,7 @@ export default function Home() {
 							<Project
 									imgUrl="https://images.unsplash.com/photo-1617380613434-7495e9b45dfb"
 									title="Himalayan Database API"
-									description="A Chrome Extension that gives you an overview over the current time, how the weather is like and how Dogecoin is performing. Interacts with multiple APIs using async JS."
+									description="RESTful web API that lets users query an online dataset of Himalayan climbing expeditions. It is built with Python using the Django framework, and deployed on AWS."
 									techStack={['Python', 'Django', 'MySQL', 'AWS']}
 							/>
 							<Project

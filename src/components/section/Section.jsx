@@ -9,7 +9,6 @@ export default function Section({children, ...props}) {
 					gap="16"
 					px={{base: "4", md: "6", lg: "8"}}
 					py="24"
-					borderWidth="thin"
 			>
 				{children}
 			</VStack>
