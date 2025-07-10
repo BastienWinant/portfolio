@@ -9,6 +9,7 @@ export default function Footer() {
 					align={{base: "flex-start", md: "center"}}
 					justify="space-between"
 					gap="12"
+					px={{base: "4", md: "6", lg: "8"}}
 			>
 				<Box borderWidth="thin" maxW="xl">
 					<Heading>BASTIEN WINANT</Heading>
