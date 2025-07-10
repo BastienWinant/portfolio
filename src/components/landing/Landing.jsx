@@ -13,6 +13,14 @@ import {
 import { FaGithub, FaXing, FaLinkedinIn } from "react-icons/fa6";
 
 export default function Landing() {
+	function handleClick() {
+		const element = document.querySelector("#projects");
+		if (element) {
+			// Smooth scroll to the element
+			element.scrollIntoView({ behavior: "smooth" });
+		}
+	}
+
 	return (
 			<Flex
 					id="home"
@@ -42,7 +50,9 @@ export default function Landing() {
 							mt="2"
 							size="lg"
 							textTransform="uppercase"
-							fontWeight="semibold">
+							fontWeight="semibold"
+							onClick={handleClick}
+					>
 						see my projects
 					</Button>
 				</VStack>
