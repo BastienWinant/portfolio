@@ -29,6 +29,7 @@ export default function Landing() {
 					position="relative"
 					align="center"
 					justify="center"
+					backgroundColor="brand.muted"
 			>
 				<VStack gap="8" textAlign="center">
 					<Heading
@@ -65,19 +66,19 @@ export default function Landing() {
 						gap="0"
 				>
 					<LinkBox p="3">
-						<Icon size="lg">
+						<Icon size="lg" color="brand.solid">
 							<FaGithub />
 						</Icon>
 						<LinkOverlay href="https://www.github.com/BastienWinant" target="_blank" />
 					</LinkBox>
 					<LinkBox p="3">
-						<Icon size="lg">
+						<Icon size="lg" color="brand.solid">
 							<FaLinkedinIn />
 						</Icon>
 						<LinkOverlay href="https://www.xing.com/profile/Bastien_Winant" target="_blank" />
 					</LinkBox>
 					<LinkBox p="3">
-						<Icon size="lg">
+						<Icon size="lg" color="brand.solid">
 							<FaXing />
 						</Icon>
 						<LinkOverlay href="https://www.xing.com/profile/Bastien_Winant" target="_blank" />

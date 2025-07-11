@@ -55,7 +55,7 @@ export default function Header() {
 					px={{base: "4", md: "6", lg: "8"}}
 					py={{base: "3", md: "4"}}
 					shadow="md"
-					bg="bg.subtle"
+					bg="brand.contrast"
 			>
 				<Flex flexGrow="1" justify="space-between" align="center">
 					<LinkBox display="flex" alignItems="center" gap="3">
