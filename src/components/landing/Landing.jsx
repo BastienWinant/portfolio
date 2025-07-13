@@ -31,17 +31,16 @@ export default function Landing() {
 					justify="center"
 					backgroundColor="brand.muted"
 			>
-				<VStack gap="8" textAlign="center">
+				<VStack gap="8" textAlign="center" maxW={{base: "10/12", md: "4/5", lg: "2/3"}}>
 					<Heading
 							size={{base: "3xl", md: "3xl", lg: "4xl"}}
 							letterSpacing="wide"
 							lineHeight="tall"
-							maxW="10/12"
 							textTransform="uppercase"
 							fontWeight="extrabold">
 						hey, my name is bastien winant
 					</Heading>
-					<Text fontSize="md" color="fg.muted" lineHeight="tall" maxW={{base: "10/12", md: "4/5", lg: "2/3"}}>
+					<Text fontSize="md" color="fg.muted" lineHeight="tall">
 						<Highlight query={["react js", "tailwind css"]} styles={{ fontWeight: "semibold" }} ignoreCase>
 							I am a passionate front-end developer based in London, UK. My specialties are React JS
 							and Tailwind CSS, and I love building apps that are delightful to use.
