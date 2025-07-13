@@ -2,7 +2,7 @@ import { LinkBox, LinkOverlay, Card, Image, Wrap, Flex, Badge } from "@chakra-ui
 
 export default function Projects({imgUrl, title, description, techStack}) {
 	return (
-			<LinkBox border="1px solid red;">
+			<LinkBox>
 				<Card.Root
 						flexDirection={{base: "column", md: "row"}}
 						overflow="hidden"
@@ -25,7 +25,18 @@ export default function Projects({imgUrl, title, description, techStack}) {
 							</Wrap>
 						</Card.Body>
 						<Card.Footer>
-							<LinkOverlay href="projects/1">Chakra V3 Workshop</LinkOverlay>
+							<LinkOverlay
+									href="projects/1"
+									px="4"
+									py="3"
+									rounded="md"
+									textTransform="capitalize"
+									fontSize="sm"
+									fontWeight="semibold"
+									bg="orange.600"
+									_hover={{ bg: "orange.500" }}
+									color="orange.50"
+							>learn more</LinkOverlay>
 						</Card.Footer>
 					</Flex>
 				</Card.Root>
