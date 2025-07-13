@@ -29,7 +29,7 @@ const customConfig = defineConfig({
 	},
 	globalCss: {
 		html: {
-			colorPalette: "brand", // Change this to any color palette you prefer
+			colorPalette: "orange", // Change this to any color palette you prefer
 		},
 	},
 })
