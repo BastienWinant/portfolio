@@ -4,6 +4,65 @@
 
 	display: flex;
 	align-items: center;
+	justify-content: center;
 
-	background: lightblue;
+	padding: 1.5rem;
+
+	background-image: url("cedric-letsch-0mY01y72UKo-unsplash.jpg");
+	background-size: cover;
+	background-position: top center;
+
+	position: relative;
+}
+
+.landing__overlay {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .85);
+}
+
+.landing__text-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2rem;
+	text-align: center;
+	z-index: 1;
+	color: white;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+.cta-btn {
+	padding: .75rem 1.5rem;
+	border: 1px solid black;
+	color: white;
+}
+
+@media (min-width: 768px) {
+	.landing {
+		justify-content: flex-start;
+		text-align: left;
+		padding: 4rem;
+	}
+
+	.landing__text-box {
+		align-items: flex-start;
+	}
+
+	h1 {
+		font-size: 4rem;
+	}
+}
+
+@media (min-width: 992px) {
+	h1 {
+		font-size: 5rem;
+	}
 }

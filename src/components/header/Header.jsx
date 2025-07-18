@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import AnchorLink from "../anchorLink/AnchorLink.jsx";
 import { FaBars, FaX } from "react-icons/fa6";
+import {useNav} from "../../contexts/navContext/NavContext.js";
 import "./Header.css"
 
 export default function Header() {
 	const [navExpanded, setNavExpanded] = useState(false);
 	const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+	const { workRef, aboutRef, contactRef} = useNav();
 
 	useEffect(() => {
 		function trackWindowWidth() {
@@ -34,17 +37,17 @@ export default function Header() {
 					</button>}
 					<ul className="nav-links">
 						<li>
-							<AnchorLink>
+							<AnchorLink targetRef={workRef} callBack={toggleNav} className="nav-link">
 								work
 							</AnchorLink>
 						</li>
 						<li>
-							<AnchorLink>
+							<AnchorLink targetRef={aboutRef} callBack={toggleNav} className="nav-link">
 								about
 							</AnchorLink>
 						</li>
 						<li>
-							<AnchorLink>
+							<AnchorLink targetRef={contactRef} callBack={toggleNav} className="nav-link">
 								contact
 							</AnchorLink>
 						</li>

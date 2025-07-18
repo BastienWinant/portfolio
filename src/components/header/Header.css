@@ -2,6 +2,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 2;
 
 	width: 100vw;
 	padding: 1.5rem;
@@ -9,14 +10,13 @@
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
-
-	background-color: white;
 }
 
 nav {
 	position: absolute;
 	top: 0;
 	left: 0;
+
 	width: 100vw;
 	height: 100vh;
 
@@ -56,10 +56,15 @@ nav {
 		height: auto;
 		width: auto;
 		justify-content: flex-end;
+		background-color: transparent;
 	}
 
 	.nav-links {
 		flex-direction: row;
 		gap: 5vw;
+	}
+
+	.nav-link {
+		color: white;
 	}
 }

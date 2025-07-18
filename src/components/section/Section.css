@@ -1,0 +1,16 @@
+.section {
+	min-height: 100vh;
+	border: 2px solid blue;
+}
+
+.section__header {
+	border: 1px solid black;
+}
+
+.section__title {
+	text-transform: capitalize;
+}
+
+.section__body {
+	border: 1px solid black;
+}
