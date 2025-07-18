@@ -9,8 +9,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  font-size: inherit;
+  font-family: inherit;
 }
 
 body {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
