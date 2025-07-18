@@ -1,9 +1,10 @@
+import Header from "./components/header/Header.jsx";
 import './App.css'
 
 function App() {
   return (
     <>
-      portfolio page
+      <Header />
     </>
   )
 }
