@@ -2,7 +2,7 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 2;
+	z-index: 1;
 
 	width: 100vw;
 	padding: 1.5rem;
@@ -25,6 +25,11 @@ nav {
 	justify-content: center;
 
 	background-color: white;
+	color: black;
+}
+
+.nav-expand-btn {
+	color: white;
 }
 
 .nav-collapse-btn {
@@ -57,14 +62,11 @@ nav {
 		width: auto;
 		justify-content: flex-end;
 		background-color: transparent;
+		color: white;
 	}
 
 	.nav-links {
 		flex-direction: row;
 		gap: 5vw;
-	}
-
-	.nav-link {
-		color: white;
 	}
 }

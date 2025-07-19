@@ -8,7 +8,7 @@ function App() {
   const {homeRef, workRef, aboutRef, contactRef} = useNav();
 
   return (
-    <>
+    <div className="container">
       <Header />
       <main>
         <Landing />
@@ -25,7 +25,7 @@ function App() {
           <Section.Body>this is the contact section</Section.Body>
         </Section>
       </main>
-    </>
+    </div>
   )
 }
 

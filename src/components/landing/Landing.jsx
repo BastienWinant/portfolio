@@ -7,7 +7,6 @@ export default function Landing() {
 
 	return (
 		<section className="landing">
-			<div className="landing__overlay"></div>
 			<div className="landing__text-box">
 				<h1>Bastien Winant</h1>
 				<p>Full-Stack Developer based in Luxembourg</p>

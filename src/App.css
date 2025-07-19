@@ -1,0 +1,14 @@
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    position: relative;
+
+    background-image: url("./assets/img/cedric-letsch-0mY01y72UKo-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 2px solid red;
+}
+
+main {
+    background-color: rgba(0, 0, 0, .85);
+}
