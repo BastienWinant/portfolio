@@ -1,5 +1,19 @@
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/Lexend/Lexend-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/Questrial/Questrial-Regular.ttf") format("truetype");
+}
+
 :root {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 /* Global reset */
@@ -12,11 +26,12 @@
 
   font-size: inherit;
   font-family: inherit;
+  font-weight: inherit;
   color: inherit;
 }
 
 body {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Questrial", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1;
 }
 

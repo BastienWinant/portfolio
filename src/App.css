@@ -1,14 +1,19 @@
 .container {
-    height: 100vh;
-    overflow-y: scroll;
-    position: relative;
+	height: 100vh;
+	overflow-y: scroll;
+	position: relative;
 
-    background-image: url("./assets/img/cedric-letsch-0mY01y72UKo-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
-    border: 2px solid red;
+	background-image: url("./assets/img/cedric-letsch-0mY01y72UKo-unsplash.jpg");
+	background-size: cover;
+	background-position: center;
 }
 
 main {
-    background-color: rgba(0, 0, 0, .85);
+	background-color: rgba(0, 0, 0, .85);
+}
+
+h1, h2, h3 {
+	font-family: "Lexend", system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	margin-left: -.075em;
 }
