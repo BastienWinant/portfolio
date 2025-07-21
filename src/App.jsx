@@ -12,16 +12,16 @@ function App() {
       <Header />
       <main>
         <Landing />
-        <Section ref={workRef}>
-          <Section.Header>work</Section.Header>
+        <Section ref={workRef} className="work">
+          <Section.Header>my work</Section.Header>
           <Section.Body>this is the work section</Section.Body>
         </Section>
         <Section ref={aboutRef}>
-          <Section.Header>about</Section.Header>
+          <Section.Header>about me</Section.Header>
           <Section.Body>this is the about section</Section.Body>
         </Section>
         <Section ref={contactRef}>
-          <Section.Header>contact</Section.Header>
+          <Section.Header>get in touch</Section.Header>
           <Section.Body>this is the contact section</Section.Body>
         </Section>
       </main>

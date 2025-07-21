@@ -9,11 +9,16 @@
 }
 
 main {
-	background-color: rgba(0, 0, 0, .85);
+	/*background-color: rgba(0, 0, 0, .85);*/
+	background-color: #272932F0;
 }
 
 h1, h2, h3 {
 	font-family: "Lexend", system-ui, Avenir, Helvetica, Arial, sans-serif;
-	font-weight: 500;
-	margin-left: -.075em;
+}
+
+/*WORK*/
+.work {
+	background-color: var(--black);
+	color: var(--white);
 }

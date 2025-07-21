@@ -1,14 +1,12 @@
 @font-face {
   font-family: 'Lexend';
   font-style: normal;
-  font-weight: 400;
   src: url("./assets/fonts/Lexend/Lexend-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
   font-family: 'Questrial';
   font-style: normal;
-  font-weight: 400;
   src: url("./assets/fonts/Questrial/Questrial-Regular.ttf") format("truetype");
 }
 
@@ -33,8 +31,6 @@
   font-family: inherit;
   font-weight: inherit;
   color: inherit;
-
-  transition: all .2s;
 }
 
 body {

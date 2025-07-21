@@ -28,6 +28,9 @@ h1 {
 	margin-top: 1rem;
 	background-color: var(--main);
 	border: 1px solid var(--main);
+	font-weight: 500;
+
+	transition: all .2s;
 }
 
 .cta-btn:hover {
@@ -38,7 +41,7 @@ h1 {
 	.landing {
 		justify-content: flex-start;
 		text-align: left;
-		padding: 4em;
+		padding: 4rem;
 	}
 
 	.landing__text-box {
@@ -47,6 +50,7 @@ h1 {
 
 	h1 {
 		font-size: 4rem;
+		margin-left: -.075em;
 	}
 }
 
