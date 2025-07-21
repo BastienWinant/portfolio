@@ -24,12 +24,12 @@ nav {
 	align-items: center;
 	justify-content: center;
 
-	background-color: white;
-	color: black;
+	background-color: var(--black);
+	color: var(--white);
 }
 
 .nav-expand-btn {
-	color: white;
+	color: var(--white);
 }
 
 .nav-collapse-btn {
@@ -64,8 +64,7 @@ nav {
 	left: 0;
 	width: 0;
 	height: 2px;
-	transition: all .2s;
-	background-color: white;
+	background-color: var(--main);
 }
 
 .nav-link:hover::after {
@@ -75,7 +74,7 @@ nav {
 	left: 0;
 	width: 100%;
 	height: 2px;
-	background-color: white;
+	background-color: var(--main);
 }
 
 @media (min-width: 768px) {
@@ -89,7 +88,7 @@ nav {
 		width: auto;
 		justify-content: flex-end;
 		background-color: transparent;
-		color: white;
+		color: var(--white);
 	}
 
 	.nav-links {
