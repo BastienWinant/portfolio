@@ -18,15 +18,15 @@ function App() {
           <Section.Body>
             <div className="work__projects">
               <ProjectCard
-                  imgUrl="https://images.unsplash.com/photo-1752350434950-50e8df9c268e"
+                  imgUrl="https://images.unsplash.com/photo-1752834370400-da734c87f565"
                   title="Quiz App"
-                  description="Quizzical is a simple quiz app that lets you select alternatives and then gives you a score. It's built with functional React components."
+                  description="Simple quiz app that lets you select alternatives and then gives you a score."
                   techStack={['HTML', 'CSS', 'JavaScript', 'React']}
                   demoLink="#"
                   githubLink="#"
               />
               <ProjectCard
-                  imgUrl="https://images.unsplash.com/photo-1752654977019-8578b2905411"
+                  imgUrl="https://images.unsplash.com/photo-1752835178514-f31f93a3b540"
                   title="Personal Dashboard"
                   description="A Chrome extension to help you focus and stay up-to-date."
                   techStack={['HTML', 'CSS', 'JavaScript', 'React']}
@@ -34,9 +34,9 @@ function App() {
                   githubLink="#"
               />
               <ProjectCard
-                  imgUrl="https://images.unsplash.com/photo-1744878150591-6ebf3a050d4f"
+                  imgUrl="https://images.unsplash.com/photo-1752805252779-000e9d493b1f"
                   title="Password Generator"
-                  description="An app that generates random passwords based on a few user inputs, e.g. length, types of characters, etc. Built with HTML, CSS, and vanilla JavaScript."
+                  description="An app that generates random passwords based on a few user inputs."
                   techStack={['HTML', 'CSS', 'JavaScript', 'React']}
                   demoLink="#"
                   githubLink="#"

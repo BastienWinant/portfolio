@@ -3,6 +3,8 @@
 	grid-template-rows: 10rem auto;
 	grid-template-columns: 1fr;
 	gap: 1rem 2rem;
+
+	/*border: 1px solid white;*/
 }
 
 .project__img {
@@ -26,6 +28,7 @@
 .project__techstack {
 	list-style: inside;
 	margin-top: 1rem;
+	margin-left: 1rem;
 }
 
 .project__footer {
@@ -49,9 +52,5 @@
 	.project {
 		grid-template-rows: auto;
 		grid-template-columns: 45% 1fr;
-	}
-
-	.project__caption {
-		padding: 1rem 0;
 	}
 }
