@@ -20,7 +20,7 @@
 }
 
 h1 {
-	font-size: 11.5vw;
+	font-size: 11vw;
 }
 
 .cta-btn {
@@ -35,6 +35,12 @@ h1 {
 
 .cta-btn:hover {
 	background-color: transparent;
+}
+
+@media (min-width: 576px) {
+	h1 {
+		font-size: 3.5rem;
+	}
 }
 
 @media (min-width: 768px) {
@@ -57,5 +63,9 @@ h1 {
 @media (min-width: 992px) {
 	.landing {
 		padding: 0 10vw;
+	}
+
+	h1 {
+		font-size: 4.5rem;
 	}
 }
