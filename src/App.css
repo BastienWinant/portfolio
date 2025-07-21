@@ -21,3 +21,9 @@ h1, h2, h3 {
 .work {
 	background-color: var(--black);
 }
+
+.work__projects {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+}
