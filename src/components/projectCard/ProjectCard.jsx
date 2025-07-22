@@ -1,6 +1,7 @@
 import {nanoid} from "nanoid";
 import "./ProjectCard.css"
-import { FaArrowRightLong, FaGithub } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
+import arrowImg from "./img/20-arrow-right.svg"
 
 export default function ProjectCard({imgUrl, title, description, techStack, githubLink, demoLink}) {
 	return (
@@ -17,6 +18,13 @@ export default function ProjectCard({imgUrl, title, description, techStack, gith
 					</ul>
 				</section>
 				<footer className="project__footer">
+					<div className="project__demo_link__container">
+						<a className="project__demo_link" href={demoLink} target="_blank">
+							Visit Site
+							<img src={arrowImg} alt="Right arrow image." />
+						</a>
+						<div className="project__demo_link__overlay"></div>
+					</div>
 					<a className="project__github_link" href={githubLink} target="_blank"><FaGithub /></a>
 				</footer>
 			</figcaption>
