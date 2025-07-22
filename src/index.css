@@ -13,10 +13,10 @@
 :root {
   font-size: 18px;
 
-  --black: #272932;
-  --white: #E7ECEF;
-  --main: #F05D5E;
-  --accent: #0F7173;
+  --black: #19231A;
+  --white: #D8CBC7;
+  --main: #33673B;
+  --accent: #CC3F0C;
 }
 
 /* Global reset */

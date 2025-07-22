@@ -43,7 +43,7 @@
 .project__demo_link__container {
 	position: relative;
 	display: flex;
-	border-bottom: 1px solid var(--main);
+	border-bottom: 1px solid var(--accent);
 }
 
 .project__demo_link__overlay {
@@ -52,7 +52,7 @@
 	left: 0;
 	height: 100%;
 	width: 0;
-	background-color: #F05D5E;
+	background-color: var(--accent);
 	z-index: 0;
 	transition: all .2s;
 }
@@ -77,7 +77,7 @@
 }
 
 .project__github_link:hover {
-	color: var(--main);
+	color: var(--accent);
 }
 
 @media only screen and (min-width: 768px) {

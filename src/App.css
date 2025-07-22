@@ -6,10 +6,12 @@
 	background-image: url("./assets/img/cedric-letsch-0mY01y72UKo-unsplash.jpg");
 	background-size: cover;
 	background-position: center;
+
+	border: 2px solid var(--accent);
 }
 
 main {
-	background-color: #272932F0;
+	background-color: #19231AF0;
 }
 
 h1, h2, h3 {
