@@ -1,7 +1,7 @@
 import {nanoid} from "nanoid";
 import "./ProjectCard.css"
 import { FaGithub } from "react-icons/fa6";
-import arrowImg from "./img/20-arrow-right.svg"
+import arrowImg from "@/assets/img/20-arrow-right.svg"
 
 export default function ProjectCard({imgUrl, title, description, techStack, githubLink, demoLink}) {
 	return (

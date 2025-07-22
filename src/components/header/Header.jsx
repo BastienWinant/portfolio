@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import AnchorLink from "../anchorLink/AnchorLink.jsx";
+import AnchorLink from "@/components/anchorLink/AnchorLink.jsx";
 import { FaBars, FaX } from "react-icons/fa6";
-import {useNav} from "../../contexts/navContext/NavContext.js";
+import {useNav} from "@/contexts/navContext/NavContext.js";
 import "./Header.css"
 
 export default function Header() {
