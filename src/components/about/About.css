@@ -25,6 +25,8 @@
 	border: 1px solid var(--accent);
 }
 
+/*TODO: resume-link hover animation*/
+
 @media only screen and (min-width: 576px) {
 	.about__img {
 		width: 35%;
