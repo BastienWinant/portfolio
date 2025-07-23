@@ -15,7 +15,10 @@ export default function About() {
 						My background is in teaching and marketing, and I have a bachelors degree in English from Kings College.
 						I also have five adorable cats.
 					</p>
-					<a href="#" className="resume-link" target="_blank">my resume</a>
+					<a href="#" className="resume-link" target="_blank">
+						<div className="resume-link__overlay"></div>
+						<span className="resume-link__text">my resume</span>
+					</a>
 				</figcaption>
 			</figure>
 	)

@@ -22,7 +22,28 @@
 	padding: .5rem 1.5rem;
 	text-transform: capitalize;
 	text-decoration: none;
-	border: 1px solid var(--accent);
+	border: .1rem solid var(--accent);
+	position: relative;
+	display: flex;
+}
+
+.resume-link__overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: var(--accent);
+	z-index: 0;
+	transition: all .2s;
+}
+
+.resume-link__text {
+	z-index: 1;
+}
+
+.resume-link:hover .resume-link__overlay {
+	width: 100%;
 }
 
 /*TODO: resume-link hover animation*/

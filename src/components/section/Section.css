@@ -6,13 +6,10 @@
 	gap: 4rem;
 
 	color: var(--white);
-
-	/*border: 1px solid var(--white);*/
 }
 
 .section__header {
 	height: 3.5rem;
-	/*border: 1px solid var(--white);*/
 }
 
 .section__title {
@@ -31,10 +28,6 @@
 	width: 2.5em;
 	height: .1em;
 	background-color: var(--main);
-}
-
-.section__body {
-	/*border: 1px solid var(--white);*/
 }
 
 @media (min-width: 768px) {
