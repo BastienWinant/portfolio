@@ -2,6 +2,7 @@ import Header from "@/components/header/Header.jsx";
 import Landing from "@/components/landing/Landing.jsx";
 import Section from "@/components/section/index.jsx";
 import ProjectCard from "@/components/projectCard/ProjectCard.jsx";
+import About from "@/components/about/About.jsx";
 import {useNav} from "@/contexts/navContext/NavContext.js";
 import '@/App.css'
 
@@ -46,7 +47,9 @@ function App() {
         </Section>
         <Section ref={aboutRef}>
           <Section.Header>about me</Section.Header>
-          <Section.Body>about section</Section.Body>
+          <Section.Body>
+            <About />
+          </Section.Body>
         </Section>
         <Section ref={contactRef}>
           <Section.Header>get in touch</Section.Header>

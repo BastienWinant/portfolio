@@ -1,0 +1,61 @@
+.about__figure,
+.about__caption {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.5;
+}
+
+.about__caption {
+	padding: 2rem;
+	gap: 1rem;
+	background-color: var(--main);
+}
+
+.about__img {
+	max-height: 15rem;
+	object-fit: cover;
+}
+
+.resume-link {
+	align-self: flex-start;
+	margin-top: 1rem;
+	padding: .5rem 1.5rem;
+	text-transform: capitalize;
+	text-decoration: none;
+	border: 1px solid var(--accent);
+}
+
+@media only screen and (min-width: 576px) {
+	.about__img {
+		width: 35%;
+		max-height: none;
+		z-index: 1;
+	}
+
+	.about__caption {
+		width: 90%;
+		align-self: flex-end;
+		position: relative;
+		top: -5rem;
+		padding-right: 8vw;
+		padding-top: 7rem;
+		z-index: 0;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.about__figure {
+		flex-direction: row;
+	}
+
+	.about__img {
+		width: 25vw;
+	}
+
+	.about__caption {
+		position: static;
+		align-self: stretch;
+		justify-content: center;
+		padding-top: 2rem;
+	}
+}
