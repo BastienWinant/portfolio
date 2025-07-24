@@ -12,8 +12,9 @@
 }
 
 .about__img {
-	max-height: 15rem;
+	height: 60vw;
 	object-fit: cover;
+	object-position: 50% 20%;
 }
 
 .resume-link {
@@ -25,8 +26,9 @@
 @media only screen and (min-width: 576px) {
 	.about__img {
 		width: 35%;
-		max-height: none;
+		height: unset;
 		z-index: 1;
+		object-position: 50% 50%;
 	}
 
 	.about__caption {
