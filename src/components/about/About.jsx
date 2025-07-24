@@ -1,3 +1,4 @@
+import AnimatedLink from "@/components/animatedLink/AnimatedLink.jsx";
 import profileImg from "@/assets/img/IMG_0145.JPG"
 import "./About.css"
 
@@ -15,10 +16,13 @@ export default function About() {
 						My background is in teaching and marketing, and I have a bachelors degree in English from Kings College.
 						I also have five adorable cats.
 					</p>
-					<a href="#" className="resume-link" target="_blank">
-						<div className="resume-link__overlay"></div>
-						<span className="resume-link__text">my resume</span>
-					</a>
+					<AnimatedLink
+							href="#"
+							className="resume-link"
+							target="_blank"
+					>
+						my resume
+					</AnimatedLink>
 				</figcaption>
 			</figure>
 	)

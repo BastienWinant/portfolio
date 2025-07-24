@@ -35,35 +35,16 @@
 	overflow-y: hidden;
 }
 
-.project__demo_link__container {
-	position: relative;
-	display: flex;
-	border-bottom: 1px solid var(--accent);
-}
-
-.project__demo_link__overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 0;
-	background-color: var(--accent);
-	z-index: 0;
-	transition: all .2s;
-}
-
 .project__demo_link {
-	z-index: 1;
-	cursor: pointer;
-	text-decoration: none;
+	padding: .25rem .5rem;
+	border: 0;
+	border-bottom: .1rem solid var(--accent);
+}
+
+.project__demo_link__text {
 	display: flex;
 	align-items: center;
 	gap: .5rem;
-	padding: .25rem .5rem;
-}
-
-.project__demo_link:hover + .project__demo_link__overlay {
-	width: 100%;
 }
 
 .project__github_link {

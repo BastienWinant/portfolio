@@ -1,3 +1,4 @@
+import AnimatedLink from "@/components/animatedLink/AnimatedLink.jsx";
 import {nanoid} from "nanoid";
 import "./ProjectCard.css"
 import { FaGithub } from "react-icons/fa6";
@@ -18,13 +19,16 @@ export default function ProjectCard({imgUrl, title, description, techStack, gith
 					</ul>
 				</section>
 				<footer className="project__footer">
-					<div className="project__demo_link__container">
-						<a className="project__demo_link" href={demoLink} target="_blank">
+					<AnimatedLink
+							href={demoLink}
+							target="_blank"
+							className="project__demo_link"
+					>
+						<span className="project__demo_link__text">
 							Visit Site
 							<img src={arrowImg} alt="Right arrow image." />
-						</a>
-						<div className="project__demo_link__overlay"></div>
-					</div>
+						</span>
+					</AnimatedLink>
 					<a className="project__github_link" href={githubLink} target="_blank"><FaGithub /></a>
 				</footer>
 			</figcaption>
