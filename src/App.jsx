@@ -16,44 +16,40 @@ function App() {
         <Landing />
         <Section ref={workRef} className="work">
           <Section.Header>my work</Section.Header>
-          <Section.Body>
             <div className="work__projects">
-              <ProjectCard
-                  imgUrl="https://images.unsplash.com/photo-1752834370400-da734c87f565"
-                  title="Quiz App"
-                  description="Fictional online platform for renting personal parking spots near major venues."
-                  techStack={['TypeScript', 'React', 'Firebase Realtime Database', 'TicketMaster API']}
-                  demoLink="#"
-                  githubLink="#"
-              />
-              <ProjectCard
-                  imgUrl="https://images.unsplash.com/photo-1617380613434-7495e9b45dfb"
-                  title="Himalayan DB API"
-                  description="A RESTful API that provides access to the Himalayan DB data."
-                  techStack={['Django', 'PostgreSQL', 'AWS API Gateway']}
-                  demoLink="#"
-                  githubLink="#"
-              />
-              <ProjectCard
-                  imgUrl="https://images.unsplash.com/photo-1752805252779-000e9d493b1f"
-                  title="Color Scheme Generator"
-                  description="An app that lets users generate, modify, and save color palettes."
-                  techStack={['React', 'Firebase Realtime Database', 'Firebase Authentication', 'Chakra UI']}
-                  demoLink="#"
-                  githubLink="#"
-              />
-            </div>
-          </Section.Body>
+            <ProjectCard
+                imgUrl="https://images.unsplash.com/photo-1752834370400-da734c87f565"
+                title="Quiz App"
+                description="Fictional online platform for renting personal parking spots near major venues."
+                techStack={['TypeScript', 'React', 'Firebase Realtime Database', 'TicketMaster API']}
+                demoLink="#"
+                githubLink="#"
+            />
+            <ProjectCard
+                imgUrl="https://images.unsplash.com/photo-1617380613434-7495e9b45dfb"
+                title="Himalayan DB API"
+                description="A RESTful API that provides access to the Himalayan DB data."
+                techStack={['Django', 'PostgreSQL', 'AWS API Gateway']}
+                demoLink="#"
+                githubLink="#"
+            />
+            <ProjectCard
+                imgUrl="https://images.unsplash.com/photo-1752805252779-000e9d493b1f"
+                title="Color Scheme Generator"
+                description="An app that lets users generate, modify, and save color palettes."
+                techStack={['React', 'Firebase Realtime Database', 'Firebase Authentication', 'Chakra UI']}
+                demoLink="#"
+                githubLink="#"
+            />
+          </div>
         </Section>
         <Section ref={aboutRef}>
           <Section.Header>about me</Section.Header>
-          <Section.Body>
-            <About />
-          </Section.Body>
+          <About />
         </Section>
         <Section ref={contactRef}>
           <Section.Header>get in touch</Section.Header>
-          <Section.Body>this is the contact section</Section.Body>
+          this is the contact section
         </Section>
       </main>
     </div>
