@@ -3,6 +3,7 @@ import Landing from "@/components/landing/Landing.jsx";
 import Section from "@/components/section/index.jsx";
 import ProjectCard from "@/components/projectCard/ProjectCard.jsx";
 import About from "@/components/about/About.jsx";
+import Contact from "@/components/contact/Contact.jsx";
 import {useNav} from "@/contexts/navContext/NavContext.js";
 import '@/App.css'
 
@@ -49,7 +50,7 @@ function App() {
         </Section>
         <Section ref={contactRef}>
           <Section.Header>get in touch</Section.Header>
-          this is the contact section
+          <Contact />
         </Section>
       </main>
     </div>
