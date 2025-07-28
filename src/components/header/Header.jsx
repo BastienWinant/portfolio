@@ -27,27 +27,27 @@ export default function Header() {
 	return (
 		<header className="header">
 			{(windowWidth < 768 && !navExpanded) &&
-					<button className="nav-expand-btn" onClick={toggleNav}>
+					<button className="header__nav-expand-btn" onClick={toggleNav}>
 						<FaBars />
 				</button>}
 			{(windowWidth >= 768 || navExpanded) &&
-				<nav>
-					{(windowWidth < 768) && <button className="nav-collapse-btn" onClick={toggleNav}>
+				<nav className="header__nav">
+					{(windowWidth < 768) && <button className="header__nav-collapse-btn" onClick={toggleNav}>
 						<FaX />
 					</button>}
-					<ul className="nav-links">
+					<ul className="header__nav-links">
 						<li>
-							<AnchorLink targetRef={workRef} callBack={toggleNav} className="nav-link">
+							<AnchorLink targetRef={workRef} callBack={toggleNav} className="header__nav-link">
 								work
 							</AnchorLink>
 						</li>
 						<li>
-							<AnchorLink targetRef={aboutRef} callBack={toggleNav} className="nav-link">
+							<AnchorLink targetRef={aboutRef} callBack={toggleNav} className="header__nav-link">
 								about
 							</AnchorLink>
 						</li>
 						<li>
-							<AnchorLink targetRef={contactRef} callBack={toggleNav} className="nav-link">
+							<AnchorLink targetRef={contactRef} callBack={toggleNav} className="header__nav-link">
 								contact
 							</AnchorLink>
 						</li>
