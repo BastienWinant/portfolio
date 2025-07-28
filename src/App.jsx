@@ -4,6 +4,7 @@ import Section from "@/components/section/index.jsx";
 import ProjectCard from "@/components/projectCard/ProjectCard.jsx";
 import About from "@/components/about/About.jsx";
 import Contact from "@/components/contact/Contact.jsx";
+import Footer from "@/components/footer/Footer.jsx";
 import {useNav} from "@/contexts/navContext/NavContext.js";
 import '@/App.css'
 
@@ -53,6 +54,7 @@ function App() {
           <Contact />
         </Section>
       </main>
+      <Footer />
     </div>
   )
 }
