@@ -17,6 +17,8 @@
   --white: #D8CBC7;
   --main: #33673B;
   --accent: #CC3F0C;
+
+  --gutter: 1.5rem;
 }
 
 /* Global reset */
@@ -48,4 +50,16 @@ img {
   display: block;
   max-width: 100%;
   object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  :root {
+    --gutter: 4rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  :root {
+    --gutter: 10vw;
+  }
 }

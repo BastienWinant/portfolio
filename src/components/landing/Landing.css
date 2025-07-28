@@ -7,7 +7,7 @@
 	align-items: center;
 	justify-content: center;
 
-	padding: 0 1.5rem;
+	padding: 0 var(--gutter);
 }
 
 .landing__text-box {
@@ -48,7 +48,7 @@ h1 {
 	.landing {
 		justify-content: flex-start;
 		text-align: left;
-		padding: 4rem;
+		padding: var(--gutter);
 	}
 
 	.landing__text-box {
@@ -63,7 +63,7 @@ h1 {
 
 @media (min-width: 992px) {
 	.landing {
-		padding: 0 10vw;
+		padding: 0 var(--gutter);
 	}
 
 	h1 {
