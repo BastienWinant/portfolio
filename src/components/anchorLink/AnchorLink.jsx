@@ -1,5 +1,3 @@
-import "./AnchorLink.css";
-
 export default function AnchorLink({children, targetRef, callBack, ...props}) {
 	function handleClick() {
 		callBack && callBack();
