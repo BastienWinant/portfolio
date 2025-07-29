@@ -26,8 +26,10 @@ h1, h2, h3 {
 
 .back-to-top-btn {
 	position: fixed;
-	bottom: 2rem;
-	right: 2rem;
-	border: 2px solid deeppink;
+	bottom: 3rem;
+	right: 3rem;
+	background-color: var(--accent);
+	color: var(--white);
+	padding: .5rem .5rem .35rem;
 	z-index: 1;
 }

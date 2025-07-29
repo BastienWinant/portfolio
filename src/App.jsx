@@ -5,10 +5,11 @@ import ProjectCard from "@/components/projectCard/ProjectCard.jsx";
 import About from "@/components/about/About.jsx";
 import Contact from "@/components/contact/Contact.jsx";
 import Footer from "@/components/footer/Footer.jsx";
+import AnchorLink from "@/components/anchorLink/AnchorLink.jsx";
 import { useState, useEffect } from "react";
 import { useNav } from "@/contexts/navContext/NavContext.js";
-import '@/App.css'
-import AnchorLink from "@/components/anchorLink/AnchorLink.jsx";
+import '@/App.css';
+import { FaArrowUpLong } from "react-icons/fa6";
 
 function App() {
   const [scrollPos, setScrollPos] = useState(window.scrollY);
@@ -25,7 +26,11 @@ function App() {
 
   return (
     <div className="container">
-      {scrollPos > 500 && <AnchorLink targetRef={homeRef} className="back-to-top-btn">back to top</AnchorLink>}
+      {scrollPos > 500 &&
+         <AnchorLink targetRef={homeRef} className="back-to-top-btn">
+          <FaArrowUpLong />
+        </AnchorLink>
+      }
       <Header />
       <main>
         <Landing ref={homeRef} />
