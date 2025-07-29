@@ -8,6 +8,7 @@ import Footer from "@/components/footer/Footer.jsx";
 import { useState, useEffect } from "react";
 import { useNav } from "@/contexts/navContext/NavContext.js";
 import '@/App.css'
+import AnchorLink from "@/components/anchorLink/AnchorLink.jsx";
 
 function App() {
   const [scrollPos, setScrollPos] = useState(window.scrollY);
@@ -22,16 +23,12 @@ function App() {
     return () => window.removeEventListener("scroll", watchScrollPos);
   }, []);
 
-  function scrollToTop() {
-    window.scroll({top: 0, left: 0, behavior: "smooth"})
-  }
-
   return (
     <div className="container">
-      {scrollPos > 500 && <button onClick={scrollToTop} className="back-to-top-btn">scroll back to top</button>}
+      {scrollPos > 500 && <AnchorLink targetRef={homeRef} className="back-to-top-btn">back to top</AnchorLink>}
       <Header />
       <main>
-        <Landing />
+        <Landing ref={homeRef} />
         <Section ref={workRef} className="work">
           <Section.Header>my work</Section.Header>
             <div className="work__projects">

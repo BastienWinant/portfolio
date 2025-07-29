@@ -1,12 +1,12 @@
 import AnchorLink from "../anchorLink/AnchorLink.jsx";
-import {useNav} from "../../contexts/navContext/NavContext.js";
+import {useNav} from "@/contexts/navContext/NavContext.js";
 import "./Landing.css";
 
-export default function Landing() {
+export default function Landing(props) {
 	const {contactRef} = useNav();
 
 	return (
-		<section className="landing">
+		<section className="landing" {...props}>
 			<div className="landing__text-box">
 				<h1>Bastien Winant</h1>
 				<p>Full-Stack Developer based in Luxembourg</p>
