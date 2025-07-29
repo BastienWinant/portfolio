@@ -23,3 +23,11 @@ h1, h2, h3 {
 	flex-direction: column;
 	gap: 4rem;
 }
+
+.back-to-top-btn {
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	border: 2px solid deeppink;
+	z-index: 1;
+}

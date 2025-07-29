@@ -5,14 +5,30 @@ import ProjectCard from "@/components/projectCard/ProjectCard.jsx";
 import About from "@/components/about/About.jsx";
 import Contact from "@/components/contact/Contact.jsx";
 import Footer from "@/components/footer/Footer.jsx";
-import {useNav} from "@/contexts/navContext/NavContext.js";
+import { useState, useEffect } from "react";
+import { useNav } from "@/contexts/navContext/NavContext.js";
 import '@/App.css'
 
 function App() {
+  const [scrollPos, setScrollPos] = useState(window.scrollY);
   const {homeRef, workRef, aboutRef, contactRef} = useNav();
+
+  useEffect(() => {
+    const watchScrollPos = () => {
+      setScrollPos(window.scrollY);
+    }
+
+    window.addEventListener("scroll", watchScrollPos);
+    return () => window.removeEventListener("scroll", watchScrollPos);
+  }, []);
+
+  function scrollToTop() {
+    window.scroll({top: 0, left: 0, behavior: "smooth"})
+  }
 
   return (
     <div className="container">
+      {scrollPos > 500 && <button onClick={scrollToTop} className="back-to-top-btn">scroll back to top</button>}
       <Header />
       <main>
         <Landing />
