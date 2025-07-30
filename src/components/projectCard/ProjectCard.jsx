@@ -7,29 +7,30 @@ import arrowImg from "@/assets/img/20-arrow-right.svg"
 export default function ProjectCard({imgUrl, title, description, techStack, githubLink, demoLink}) {
 	return (
 		<figure className="project">
-			<img className="project__img" src={imgUrl} alt="Project screenshot." />
+			<img src={imgUrl} className="project__img" alt="Screenshot" />
 			<figcaption className="project__caption">
-				<header className="project__header">
-					<h3 className="project__title">{title}</h3>
-				</header>
-				<section>
+				<h3 className="project__title">{title}</h3>
+				<div className="project__body">
 					<p className="project__description">{description}</p>
 					<ul className="project__techstack">
-						{techStack.map(tech => <li key={nanoid()} className="project__tech">{tech}</li>)}
+						{techStack.map(tech => <li>{tech}</li>)}
 					</ul>
-				</section>
-				<footer className="project__footer">
+				</div>
+				<footer className="project__links">
 					<AnimatedLink
-							href={demoLink}
-							target="_blank"
-							className="project__demo_link"
+						href={demoLink}
+						className="project__demo_link"
+						target="_blank"
 					>
-						<span className="project__demo_link__text">
-							Visit Site
-							<img src={arrowImg} alt="Right arrow image." />
-						</span>
+						visit site
 					</AnimatedLink>
-					<a className="project__github_link" href={githubLink} target="_blank"><FaGithub /></a>
+					<a
+						href={githubLink}
+						target="_blank"
+						className="project__github_link"
+					>
+						<FaGithub />
+					</a>
 				</footer>
 			</figcaption>
 		</figure>

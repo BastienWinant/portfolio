@@ -1,65 +1,39 @@
-.project {
-	display: grid;
-	grid-template-rows: 10rem auto;
-	grid-template-columns: 1fr;
-	gap: 1rem 2rem;
-}
-
-.project__img {
-	height: 100%;
-}
-
 .project__caption {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	gap: 1rem;
+	gap: .5rem;
 	line-height: 1.5;
 }
 
 .project__title {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 }
 
 .project__techstack {
 	list-style: inside;
-	margin-top: 1rem;
-	margin-left: 1rem;
+	display: flex;
+	flex-direction: column;
 }
 
-.project__footer {
-	margin-top: 1rem;
+.project__links {
+	margin-top: .5rem;
 	display: flex;
 	align-items: center;
-	gap: 2.5rem;
-	overflow-y: hidden;
+	gap: 2rem;
 }
 
 .project__demo_link {
-	padding: .25rem .5rem;
-	border: 0;
+	padding: .5em;
+	border: none;
 	border-bottom: .1rem solid var(--accent);
-}
-
-.project__demo_link__text {
-	display: flex;
-	align-items: center;
-	gap: .5rem;
 }
 
 .project__github_link {
 	font-size: 1.5rem;
-	margin-bottom: -.4em;
+	margin-bottom: -.3em;
 	transition: all .2s;
 }
 
 .project__github_link:hover {
 	color: var(--accent);
-}
-
-@media only screen and (min-width: 768px) {
-	.project {
-		grid-template-rows: auto;
-		grid-template-columns: 45% 1fr;
-	}
 }
