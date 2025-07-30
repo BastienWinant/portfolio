@@ -13,6 +13,7 @@
 	list-style: inside;
 	display: flex;
 	flex-direction: column;
+	margin: .5rem 0;
 }
 
 .project__links {
@@ -26,6 +27,12 @@
 	padding: .5em;
 	border: none;
 	border-bottom: .1rem solid var(--accent);
+}
+
+.project__demo_link__text {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 }
 
 .project__github_link {
