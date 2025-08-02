@@ -38,7 +38,7 @@ function App() {
           <Section.Header>my work</Section.Header>
             <div className="work__projects">
             <ProjectCard
-                imgUrl="https://images.unsplash.com/photo-1752834370400-da734c87f565"
+                imgUrl="https://images.unsplash.com/photo-1753793854164-8e7487b81e2d"
                 title="Quiz App"
                 description="Fictional online platform for renting personal parking spots near major venues."
                 techStack={['TypeScript', 'React', 'Firebase Realtime Database', 'TicketMaster API']}

@@ -1,7 +1,21 @@
+.project {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: minmax(50vw, 20rem);
+	gap: .5rem;
+}
+
+.project__img {
+	height: 100%;
+	width: 100%;
+}
+
 .project__caption {
 	display: flex;
 	flex-direction: column;
-	gap: .5rem;
+	justify-content: center;
+	align-items: flex-start;
+	gap: .5em;
 	line-height: 1.5;
 }
 
@@ -11,20 +25,18 @@
 
 .project__techstack {
 	list-style: inside;
-	display: flex;
-	flex-direction: column;
 	margin: .5rem 0;
 }
 
-.project__links {
-	margin-top: .5rem;
+.project__footer {
 	display: flex;
 	align-items: center;
 	gap: 2rem;
+	margin-top: .5rem;
 }
 
 .project__demo_link {
-	padding: .5em;
+	padding: .5rem;
 	border: none;
 	border-bottom: .1rem solid var(--accent);
 }
@@ -32,15 +44,23 @@
 .project__demo_link__text {
 	display: flex;
 	align-items: center;
-	gap: 1rem;
+	gap: .5rem;
 }
 
 .project__github_link {
 	font-size: 1.5rem;
-	margin-bottom: -.3em;
-	transition: all .2s;
+	margin-bottom: -.4em;
 }
 
-.project__github_link:hover {
-	color: var(--accent);
+@media only screen and (min-width: 768px) {
+	.project {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 340px;
+		gap: 4vw;
+	}
+
+	.project__caption {
+		flex-grow: 1;
+	}
 }

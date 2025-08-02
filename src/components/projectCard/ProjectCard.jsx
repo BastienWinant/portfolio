@@ -16,7 +16,7 @@ export default function ProjectCard({imgUrl, title, description, techStack, gith
 						{techStack.map(tech => <li key={nanoid()}>{tech}</li>)}
 					</ul>
 				</div>
-				<footer className="project__links">
+				<footer className="project__footer">
 					<AnimatedLink
 						href={demoLink}
 						className="project__demo_link"
