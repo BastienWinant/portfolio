@@ -48,8 +48,13 @@
 }
 
 .project__github_link {
-	font-size: 1.5rem;
+	font-size: 1.65rem;
 	margin-bottom: -.4em;
+	transition: all .2s;
+}
+
+.project__github_link:hover {
+	color: var(--accent);
 }
 
 @media only screen and (min-width: 768px) {
